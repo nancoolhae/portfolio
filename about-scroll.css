@@ -8,7 +8,7 @@
 .about-fruit-group{position:relative;width:var(--rolling-fruit-size,310px);height:var(--rolling-fruit-size,310px);margin:40px auto;transform-origin:center}
 .about-fruit{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;filter:none;box-shadow:none;transform-origin:center}
 .about-fruit:not(.whole){opacity:0}
-.about-roll-copy{max-width:900px;margin:36px 0}
+.about-roll-copy{max-width:none;margin:36px 0}
 .about-roll-copy h3{font-size:22px;line-height:1.5;margin-bottom:12px;letter-spacing:-.03em}
 .about-roll-copy p{font-size:15px;line-height:1.85;color:#444}
 /* 화면은 고정하지만 스크롤 입력은 잠그지 않는다. */
@@ -25,3 +25,6 @@
 .about-fruit-group .about-fruit{background:transparent;border:0;border-radius:0;animation:none}
 /* 매 프레임의 진행률을 그대로 반영하여 기존 히어로용 전환 지연을 방지한다. */
 .about-fruit-group .about-fruit{transition:none}
+
+/* 데스크톱은 지정한 문장 단위로 줄바꿈하고, 작은 화면은 자연스럽게 감싼다. */
+@media(max-width:1199px){.about-line-break{display:none}}

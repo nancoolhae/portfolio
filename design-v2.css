@@ -80,7 +80,7 @@ body{font-family:'Pretendard',system-ui,sans-serif;background:#FAFAFA}em{color:v
 .career-sidebar h2{margin-bottom:28px}
 .career-sidebar .filters{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin:0}
 .career-sidebar .filters button{font-size:14px;padding:8px 20px;border:1px solid #aaa;background:transparent;line-height:1.5}
-.career-sidebar .filters button[aria-pressed=true]{background:#666;border-color:#666;color:#fff}
+.career-sidebar .filters button[aria-pressed=true]{background:#FF8800;border-color:#FF8800;color:#222}
 .career-records{border:1px solid #a4a4a4;border-radius:16px;padding:24px 32px;min-height:330px}
 .career .career-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center;padding:24px 0;border-top:0;border-bottom:1px solid #e0e0e0}
 .career .career-row:last-child{border-bottom:0}
