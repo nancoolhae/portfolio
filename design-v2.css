@@ -1,0 +1,164 @@
+/* 요청한 두 번째 디자인 버전. 공통 섹션/접근성 규칙은 styles.css를 재사용한다.
+ * Pretendard를 로컬 번들로 제공해 설치 여부와 네트워크 상태에 의존하지 않는다. */
+@font-face{font-family:'Pretendard';src:url('assets/fonts/PretendardVariable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+:root{--paper:#FAFAFA;--ink:#222222;--muted:#696969;--orange:#FF9900;--fruit:#FF9900;--line:#e7e7eb;--green:#222222;--radius:22px;--pad:clamp(22px,4vw,76px)}
+body{font-family:'Pretendard',system-ui,sans-serif;background:#FAFAFA}em{color:var(--ink);text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:.075em;text-underline-offset:.11em}.header{background:rgba(250,250,250,.97)}.primary{background:var(--orange);border-color:var(--orange);color:#222;font-weight:650}.primary:hover{background:#ffb13c}.brand img{object-fit:contain}.section-head>p{max-width:270px}.nav-contact{border-color:#d1d1d1}.hero{gap:20px;padding-top:40px;padding-bottom:20px;min-height:calc(100svh - 88px)}h1{font-size:clamp(42px,4.6vw,70px)}.hero-description{margin:22px 0}.document-links{margin-top:18px}.hero-art{min-height:420px}.orbit-label{transform:none;letter-spacing:.16em;color:#727272;font-size:10px}.fruit-button{width:min(100%,540px);border-radius:20px}.fruit-scene{display:block;position:relative;width:100%;aspect-ratio:1;will-change:transform}.fruit-scene>span{position:absolute;inset:0;display:block}.fruit-scene img{height:100%;width:100%;object-fit:contain;filter:none}.whole{opacity:1;transition:opacity .25s;z-index:2}.fruit-button:hover .whole{transform:none}.peeled-photo{opacity:0;transform:scale(.93);transition:opacity .7s .1s,transform .9s;z-index:1}.peel-shell{opacity:0;z-index:3;pointer-events:none;transform-origin:50% 80%;transition:transform 1s cubic-bezier(.2,.7,.2,1),opacity .85s}.peel-left{clip-path:polygon(0 0,50% 0,49% 100%,0 100%)}.peel-right{clip-path:polygon(50% 0,100% 0,100% 100%,51% 100%)}.fruit-button.peeling .whole{opacity:0}.fruit-button.peeling .peeled-photo{opacity:1;transform:scale(1)}.fruit-button.peeling .peel-left{animation:rind-left 1.15s both}.fruit-button.peeling .peel-right{animation:rind-right 1.15s both}.fruit-button.squeezing .fruit-scene{animation:knead .72s cubic-bezier(.36,0,.26,1)}
+/* 첫 번째와 두 번째 제스처: 살짝 줄었다 원래 크기로 돌아오며 부드러운 질감을 표현. */
+@keyframes knead{0%,100%{transform:scale(1)}38%{transform:scale(.91,.88) rotate(-1.2deg)}68%{transform:scale(1.025,1.015) rotate(.5deg)}}
+/* 사진 껍질 레이어를 좌우로 열며 같은 구도의 속살 사진으로 전환. */
+@keyframes rind-left{0%{opacity:1;transform:none}70%{opacity:.55;transform:translate(-12%,13%) rotate(-15deg) scale(.93)}100%{opacity:0;transform:translate(-19%,22%) rotate(-24deg) scale(.9)}}
+@keyframes rind-right{0%{opacity:1;transform:none}70%{opacity:.55;transform:translate(12%,13%) rotate(15deg) scale(.93)}100%{opacity:0;transform:translate(19%,22%) rotate(24deg) scale(.9)}}
+.intro-progress{display:flex;gap:15px;justify-content:center;margin-top:-4px;font-size:11px;color:#7d7d7d}.intro-progress span{border-top:2px solid #ddd;padding-top:7px;transition:border-color .3s,color .3s}.intro-progress span.complete{border-color:var(--orange);color:#282828}.art-caption{margin-top:13px;transform:none;text-align:center;font-size:12px}.hero-foot{margin-top:15px;padding-top:16px}.hero-foot a{letter-spacing:0}.hero-foot>span:last-child{font-variant-numeric:tabular-nums;color:#6b6b6b}.manifesto{background:#fff1d9;color:#2d2d2d;border-block:1px solid #ffe0a8;font-size:clamp(17px,2vw,27px)}.manifesto img{width:30px;transform:none}.career{background:#f5f5f7}.tree-crown{background:#efefef}.tree-trunk{background:#aaa}.tree-art>p{border-color:#ccc}.career-row{border-color:var(--line)}.career-row>span,.process li>span{color:#875000}.about{background:#f0f0f2}.about-seal{background:#fff7e7;color:#764600;border-color:var(--orange)}
+.fruit-scene{overflow:hidden;border-radius:20px}/* 껍질의 이동 레이어가 페이지 가로 넘침을 만들지 않게 한정한다. */
+/* 이미지/역량/제목/한줄소개/날짜를 하나의 카드 안에 그룹화.
+ * 첫 카드만 늘리는 규칙을 제거해 대표 프로젝트도 동등한 무게로 보인다. */
+.project-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.project-card,.project-card:first-child.featured{grid-column:auto;display:flex;flex-direction:column;gap:0;border:1px solid #e9e9ef;border-radius:22px;overflow:hidden;background:#fff;transition:transform .22s,box-shadow .22s;min-width:0}.project-card:hover{transform:translateY(-5px);box-shadow:0 12px 26px #2222220a}.card-visual{border-radius:0;min-height:0;width:100%;aspect-ratio:1.55;padding:20px;flex-shrink:0}.card-visual img{width:100%;height:auto;max-height:100%;object-fit:contain;box-shadow:0 7px 18px #22222213;transition:transform .4s}.card-visual:hover img{transform:scale(1.035)}.card-type-art{font-size:clamp(24px,2.7vw,42px);line-height:1.3}.card-type-art small{font-size:10px;letter-spacing:0;margin-top:10px}.card-arrow{width:29px;height:29px;right:12px;bottom:12px;font-size:17px}.card-meta,.featured .card-meta{display:flex;flex-direction:column;flex:1;padding:20px}.tag-row{gap:6px;margin-bottom:13px;min-height:28px}.tag-row span{font-size:11px;padding:4px 9px;line-height:1.6;background:#fff7e8;border:1px solid #ffe0a6;color:#754400;border-radius:10px}.card-meta h3{font-size:23px;line-height:1.3;letter-spacing:-.025em;margin:0 0 12px}.card-meta h3 a{display:inline-block}.card-meta p.card-summary{font-size:14px;line-height:1.65;color:#666;min-height:70px;margin:0 0 25px;font-weight:400}.card-date{border-top:1px solid #eeeeef;padding-top:14px;display:flex;gap:8px;align-items:center;margin-top:auto;color:#6d6d6d;font-size:12px;line-height:1.5}.card-date>span:first-child{color:#8a5200;font-size:18px}.filters button[aria-pressed=true]{background:#222;color:white}.tool-item span{color:#727272}.contact form{background:#fff}.profile div{border-color:#d9d9df}
+@media(min-width:1600px){.hero{min-height:calc(100svh - 88px)}}
+@media(max-width:1000px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card-type-art{font-size:36px}.hero-art{min-height:340px}.intro-progress{gap:10px;font-size:10px}}
+@media(max-width:740px){.hero{min-height:calc(100svh - 72px);grid-template-columns:1fr;padding-top:25px;padding-bottom:18px;gap:8px}.hero h1{font-size:clamp(32px,7.8vw,48px)}.hero .eyebrow{font-size:9px;margin-bottom:14px}.hero-description{font-size:12px;margin:14px 0}.hero .button{font-size:12px;padding:12px 18px}.document-links{font-size:10px;margin-top:12px;gap:15px}.document-links .unavailable{font-size:10px}.hero-art{width:min(100%,290px);min-height:0;margin-top:0}.fruit-button{width:260px;max-width:100%}.orbit-label{font-size:8px;margin-top:7px}.intro-progress{margin-top:-9px;font-size:10px;gap:13px}.art-caption{font-size:10px;margin-top:8px}.hero-foot{margin-top:8px;font-size:9px;padding-top:12px;gap:10px}.hero-foot a{font-size:9px}.hero-foot>span:first-child{display:none}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card-meta,.featured .card-meta{padding:16px}.card-meta h3{font-size:20px}.card-meta p.card-summary{font-size:12px;min-height:80px}.tag-row span{font-size:10px;padding:3px 6px}.card-visual{padding:13px}.card-type-art{font-size:25px}.card-date{font-size:10px}.project-card{border-radius:18px}.manifesto{font-size:18px}.about-seal{background:#fff7e7}}
+@media(max-width:520px){.project-grid{grid-template-columns:1fr}.card-meta{padding:22px}.card-meta p.card-summary{min-height:0;font-size:14px}.card-visual{aspect-ratio:1.7;padding:22px}.card-meta h3{font-size:25px}.card-date{font-size:12px}.tag-row span{font-size:12px}.card-type-art{font-size:40px}}
+@media(prefers-reduced-motion:reduce){.fruit-button.squeezing .fruit-scene{animation:none}.fruit-button.peeling .peel-shell{animation:none;opacity:0}.peeled-photo{transition:none}.project-card:hover{transform:none;box-shadow:none}}
+
+/* v3: 인트로와 소개를 별도 화면으로 분리. nav의 위치·세 단계 모션은 유지한다. */
+.hero.section{display:flex;align-items:center;justify-content:center;height:calc(100svh - 88px);min-height:420px;padding:20px var(--pad);gap:0}
+.hero .hero-art{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-height:0;margin:0}
+.intro-caption{color:#777;font-size:14px;font-weight:400;letter-spacing:0;text-align:center;margin:0 0 16px}
+.hero .fruit-button{width:clamp(240px,44vw,520px);max-width:min(100%,58svh);margin:0;padding:0;background:transparent;border:0}
+.introduction{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:center;min-height:calc(100svh - 88px);padding-block:80px}
+.introduction-copy{text-align:left;min-width:0}
+.introduction h1{font-size:clamp(24px,3vw,48px);font-weight:650;letter-spacing:-.05em;line-height:1.65;text-align:left}
+.introduction h1 span{display:block;white-space:nowrap}
+.introduction-fruit{width:100%;max-width:470px;height:auto;aspect-ratio:1 / 1;object-fit:contain;align-self:center;justify-self:center}
+.intro-documents{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.intro-documents .button{background:#FF9900;border-color:#FF9900;color:#222;padding:14px 24px;justify-content:center;gap:0;font-size:14px;font-weight:600}
+.intro-documents .button:hover{background:#ffae33}
+.document-status{font-size:12px;color:var(--muted);margin-top:14px;min-height:20px}
+@media(max-width:740px){.hero.section{height:calc(100svh - 72px);min-height:350px;padding:20px}.hero .hero-art{width:100%;margin:0}.intro-caption{font-size:12px;margin-bottom:15px}.hero .fruit-button{width:clamp(240px,72vw,400px);max-width:min(100%,55svh)}.introduction{grid-template-columns:1fr;gap:24px;min-height:calc(100svh - 72px);padding:65px 22px}.introduction h1{font-size:clamp(19px,4.7vw,32px);line-height:1.7}.intro-documents{margin-top:24px;gap:10px}.intro-documents .button{padding:12px 18px;font-size:13px}.introduction-fruit{width:min(75%,320px);grid-row:2}}
+
+/* v6: 메인 대표 작업 / 별도 전체 프로젝트 페이지.
+ * 대표 작업의 빈 슬롯은 링크 없는 카드로 상태를 명확히 알린다. */
+[hidden]{display:none!important}
+.featured-label{letter-spacing:0;font-size:13px;color:var(--muted);margin-bottom:18px}
+.featured-projects .project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.all-projects-link{white-space:nowrap;align-self:center}
+.all-projects .section-head{margin-top:32px}
+.all-projects h1{font-size:clamp(34px,4.1vw,62px)}
+.project-pending .card-visual{display:flex;align-items:center;justify-content:center}
+.project-pending:hover{transform:none;box-shadow:none}
+.header nav{gap:clamp(12px,1.7vw,28px)}
+@media(max-width:1000px){.featured-projects .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){.all-projects-link{margin-top:24px}.header nav{gap:0}}
+@media(max-width:520px){.featured-projects .project-grid{grid-template-columns:1fr}}
+
+/* v8: 사용자 화면설계서 A4-6 / A4-8의 큰 틀.
+ * 주황색 주석은 화면에 표시하지 않는다. 기존 실제 콘텐츠와 날짜 상태를 유지한다. */
+.featured-projects{max-width:1440px;padding:64px var(--pad) 120px}
+.featured-projects .section-head{align-items:flex-end;margin-bottom:36px;gap:24px}
+.featured-projects .featured-label,.career-sidebar .eyebrow{font-size:14px;color:#999;font-weight:400;letter-spacing:0;margin-bottom:10px}
+.featured-projects h2,.career-sidebar h2{font-size:clamp(28px,2.3vw,36px);line-height:1.3;font-weight:700;letter-spacing:-.04em}
+.featured-projects h2 em{color:var(--ink);background:none}
+.featured-projects .all-projects-link{background:transparent;color:var(--ink);border:0;border-radius:0;padding:0;font-size:13px;gap:8px;align-self:flex-end;margin-bottom:5px}
+.featured-projects .project-grid{gap:20px}
+.featured-projects .project-card{border-color:#b6b6b6;border-radius:16px;cursor:pointer}
+.featured-projects .card-visual{background:#fff;border-bottom:1px solid #ddd;aspect-ratio:1.7;padding:28px;min-height:0}
+.featured-projects .card-visual img{box-shadow:none;max-width:100%;max-height:100%;object-fit:contain}
+.featured-projects .project-card:hover .card-visual img{transform:scale(1.055)}
+.featured-projects .project-card:hover{transform:none;box-shadow:0 4px 18px #22222220}
+.featured-projects .card-arrow{display:none}
+.featured-projects .card-meta{padding:16px;min-height:222px}
+.featured-projects .tag-row{min-height:24px;margin-bottom:10px}
+.featured-projects .tag-row span{font-size:11px;line-height:1.5;padding:3px 7px;background:#f3f3f3;color:#444;border:1px solid #ccc;border-radius:5px}
+.featured-projects .card-meta h3{font-size:16px;line-height:1.5;margin-bottom:20px;min-height:48px;letter-spacing:-.03em}
+.featured-projects .card-meta h3 a{text-decoration:none}
+.featured-projects .card-meta p.card-summary{font-size:12px;color:#888;line-height:1.6;min-height:40px;margin-bottom:18px}
+.card-date .card-document-type{color:#888;font-size:12px}
+.featured-projects .card-date{justify-content:space-between;font-size:11px;padding-top:12px;border-top-color:#e5e5e5}
+.featured-projects .project-pending{cursor:default}
+.featured-projects .project-pending:hover{box-shadow:none}
+.career{max-width:none;background:#f5f5f5;padding:72px max(var(--pad),calc((100vw - 1276px)/2)) 80px}
+.career .career-layout{display:grid;grid-template-columns:minmax(190px,1fr) minmax(0,2.7fr);gap:44px;align-items:start}
+.career-sidebar h2{margin-bottom:28px}
+.career-sidebar .filters{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin:0}
+.career-sidebar .filters button{font-size:14px;padding:8px 20px;border:1px solid #aaa;background:transparent;line-height:1.5}
+.career-sidebar .filters button[aria-pressed=true]{background:#666;border-color:#666;color:#fff}
+.career-records{border:1px solid #a4a4a4;border-radius:16px;padding:24px 32px;min-height:330px}
+.career .career-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center;padding:24px 0;border-top:0;border-bottom:1px solid #e0e0e0}
+.career .career-row:last-child{border-bottom:0}
+.career .career-row h3{font-size:16px;line-height:1.5;font-weight:600;letter-spacing:-.02em}
+.career .career-row p{font-size:14px;color:#555;margin-top:4px;line-height:1.6}
+.career .career-date{font-size:16px;color:#222;font-weight:650;white-space:nowrap}
+@media(max-width:1000px){.career .career-layout{grid-template-columns:190px minmax(0,1fr);gap:25px}.featured-projects .project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.featured-projects .card-visual{padding:15px}.featured-projects .card-meta{padding:13px}.featured-projects .card-date{flex-wrap:wrap}}
+@media(max-width:740px){.featured-projects{padding:55px 22px 70px}.featured-projects .section-head{display:flex;align-items:flex-start;flex-direction:column;gap:18px}.featured-projects .all-projects-link{align-self:flex-start;margin:0}.featured-projects .project-grid{grid-template-columns:1fr}.featured-projects .card-meta{min-height:0;padding:20px}.featured-projects .card-meta h3{min-height:0;font-size:18px}.featured-projects .card-visual{padding:26px}.career{padding:55px 22px}.career .career-layout{grid-template-columns:1fr;gap:26px}.career-sidebar h2{margin-bottom:22px}.career-sidebar .filters{flex-direction:row;flex-wrap:wrap;gap:8px}.career-sidebar .filters button{font-size:12px;padding:7px 13px}.career-records{padding:8px 20px;min-height:220px}.career .career-row{gap:16px}.career .career-row h3{font-size:15px}.career .career-row p{font-size:13px}.career .career-date{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.featured-projects .project-card:hover .card-visual img{transform:none}}
+.featured-projects h2 em{text-decoration:none}.featured-projects .card-date .card-document-type{font-size:11px;color:#999}
+
+/* v9: A4-1 / 9 / 10 / 11 화면 구성. 인트로 상태 머신은 유지한다. */
+.hero .fruit-button{width:clamp(240px,28vw,360px);max-width:min(100%,52svh)}
+.hero .intro-caption{font-size:15px;margin-bottom:30px;color:#333}
+.introduction{max-width:1440px;min-height:500px;padding-block:85px;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:60px}
+.introduction h1{font-size:clamp(24px,2.5vw,38px);line-height:1.6;font-weight:500}
+.introduction-fruit{max-width:320px;height:auto}
+.intro-documents .button{border-radius:10px;font-size:14px;padding:14px 24px}
+.about{display:block;background:#f5f5f5;margin:0;max-width:none;border-radius:0;padding:80px var(--pad)}
+.about-inner{max-width:1276px;margin:auto}
+.about .eyebrow,.contact .eyebrow{font-size:14px;font-weight:400;letter-spacing:0;color:#999;margin-bottom:10px}
+.about h2,.contact h2{font-size:clamp(28px,2.3vw,36px);font-weight:700;line-height:1.3}
+.about-stories{margin-top:40px}
+.about-stories article{padding:30px 0;border-bottom:1px solid #ddd}
+.about-stories article:first-child{padding-top:0}
+.about-stories article:last-child{border:0;padding-bottom:0}
+.about-stories h3{font-size:22px;line-height:1.5;letter-spacing:-.03em;margin-bottom:14px}
+.about-stories p{font-size:15px;line-height:1.85;color:#444}
+.contact{display:block;max-width:1440px;padding:80px var(--pad) 100px}
+.contact form{margin-top:36px;border:1px solid #555;border-radius:14px;padding:32px;background:#fff}
+.contact form h3{font-size:24px;line-height:1.4;margin-bottom:34px}
+.contact form label{font-size:14px;margin:28px 0 8px}
+.contact input,.contact textarea{font-size:14px;border-bottom:1px solid #777;padding:10px 0;line-height:1.6}
+.contact textarea{min-height:62px}
+.contact form .button{background:#444;color:white;border-color:#444;border-radius:10px;justify-content:center;font-weight:400;padding:14px;margin-top:36px}
+.contact form .button:hover{background:#222}
+.contact #form-status{font-size:12px}
+.contact .contact-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
+.contact-info>div{display:flex;align-items:center;gap:14px;border:1px solid #777;background:#f5f5f5;border-radius:12px;padding:20px}
+.contact-info>div>div{display:block;padding:0}
+.contact-info dt{font-size:13px;font-weight:650;color:#222;line-height:1.5}
+.contact-info dd{font-size:14px;color:#222;margin-top:4px}
+.contact-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid #777;border-radius:50%;flex-shrink:0;font-size:20px}
+.portfolio-footer{display:block;background:#f5f5f5;border-top:0;padding:42px var(--pad) 24px}
+.footer-main{max-width:1276px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:30px;padding-bottom:24px}
+.portfolio-footer .footer-main p{display:block;max-width:none;color:#222;font-size:24px;line-height:1.5;font-weight:500;letter-spacing:-.03em}
+.footer-main img{width:160px;height:auto;object-fit:contain}
+.footer-bottom{max-width:1276px;margin:auto;border-top:1px solid #ddd;padding-top:20px;color:#888;font-size:12px}
+.back-to-top{position:fixed;right:28px;bottom:26px;z-index:19;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#444;color:#fff;text-decoration:none;font-size:26px;line-height:1;box-shadow:0 3px 12px #0001}
+@media(max-width:740px){.hero .fruit-button{width:clamp(240px,62vw,340px);max-width:min(100%,50svh)}.hero .intro-caption{font-size:13px;margin-bottom:20px}.introduction{grid-template-columns:1fr;gap:25px;padding:55px 22px;min-height:0}.introduction h1{font-size:clamp(19px,4.7vw,30px)}.introduction-fruit{width:min(70%,260px)}.about{padding:55px 22px}.about-stories{margin-top:30px}.about-stories h3{font-size:19px}.about-stories p{font-size:14px}.contact{padding:55px 22px 65px}.contact form{padding:24px 20px}.contact form h3{font-size:20px}.contact .contact-info{grid-template-columns:1fr;gap:12px}.contact-info>div{padding:16px}.portfolio-footer{padding:30px 22px 22px}.portfolio-footer .footer-main p{font-size:17px}.footer-main img{width:95px}.footer-main{gap:14px}.back-to-top{width:40px;height:40px;right:16px;bottom:16px;font-size:23px}}
+
+/* v10: A4-8의 귤 당도 영역. 최대 15 Brix의 역량 메타포. */
+.sweetness{max-width:1440px;padding:80px var(--pad)}
+.sweetness-layout{display:grid;grid-template-columns:minmax(240px,1fr) minmax(0,1.65fr);gap:70px;align-items:start}
+.sweetness-intro .eyebrow{font-size:14px;letter-spacing:0;font-weight:400;color:#999;margin-bottom:10px}
+.sweetness h2{font-size:clamp(28px,2.3vw,36px);line-height:1.3;font-weight:700}
+.sweetness-legend{font-size:13px;color:#999;line-height:1.6;margin-top:18px}
+.sweetness-intro img{width:260px;max-width:90%;height:auto;margin-top:28px;object-fit:contain}
+.sweetness-tools{padding-top:52px}
+.sweetness-tool{margin-bottom:34px}
+.sweetness-tool:last-child{margin-bottom:0}
+.sweetness-tool-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+.sweetness-tool h3{font-size:19px;font-weight:650;line-height:1.5;letter-spacing:0}
+.sweetness-tool-heading span{font-size:14px;color:#333;white-space:nowrap}
+.sweetness-tool p{font-size:14px;color:#999;line-height:1.6;margin:6px 0 10px}
+.sweetness-tool meter{display:block;width:100%;height:12px;appearance:none;-webkit-appearance:none;background:#eee;border:0;border-radius:0}
+.sweetness-tool meter::-webkit-meter-bar{background:#eee;border:0;border-radius:0;height:12px;box-shadow:none}
+.sweetness-tool meter::-webkit-meter-optimum-value{background:#bcbcbc;border-radius:0}
+.sweetness-tool meter::-moz-meter-bar{background:#bcbcbc;border-radius:0}
+@media(max-width:740px){.sweetness{padding:55px 22px}.sweetness-layout{grid-template-columns:1fr;gap:28px}.sweetness-intro img{width:180px;max-width:65%;margin-top:20px}.sweetness-tools{padding-top:0}.sweetness-tool{margin-bottom:26px}.sweetness-tool h3{font-size:18px}.sweetness-tool p{font-size:13px}}
+/* v15: 귤 성분표의 네 소개 항목을 2열 2행으로 배치. */
+.about-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px}
+.about-stories article,.about-stories article:first-child,.about-stories article:last-child{padding:0 0 28px;border-bottom:1px solid #ddd;min-width:0}
+.about-stories p br{display:none}
+@media(max-width:740px){.about-stories{grid-template-columns:1fr;gap:26px}.about-stories article:last-child{border-bottom:0;padding-bottom:0}}
+
+/* 위로 가기: 화살표와 텍스트를 한 개의 원형 링크 안에 배치한다. */
+.back-to-top{display:flex;flex-direction:column;justify-content:center;gap:0}
+.back-to-top .top-arrow{font-size:23px;line-height:18px;height:18px}
+.back-to-top .top-label{font-size:10px;line-height:13px;font-weight:500}
+@media(max-width:740px){.back-to-top .top-arrow{font-size:20px;line-height:15px;height:15px}.back-to-top .top-label{font-size:9px;line-height:11px}}

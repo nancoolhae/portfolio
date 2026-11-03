@@ -1,0 +1,2 @@
+iOS/Apple tangerine emoji asset: https://github.com/iamcal/emoji-data/blob/master/img-apple-64/1f34a.png
+Vendor artwork: Apple. Included for the user-requested iOS emoji display.
