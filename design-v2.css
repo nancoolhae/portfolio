@@ -162,3 +162,10 @@ body{font-family:'Pretendard',system-ui,sans-serif;background:#FAFAFA}em{color:v
 .back-to-top .top-arrow{font-size:23px;line-height:18px;height:18px}
 .back-to-top .top-label{font-size:10px;line-height:13px;font-weight:500}
 @media(max-width:740px){.back-to-top .top-arrow{font-size:20px;line-height:15px;height:15px}.back-to-top .top-label{font-size:9px;line-height:11px}}
+
+/* 히어로의 세 번째 단계: 분할 레이어 없이 두 실사 이미지를 교차 페이드한다. */
+#peel .peel-shell{display:none}
+#peel .whole{transition:opacity .85s ease;transform:none}
+#peel .peeled-photo{transform:none;transition:opacity .85s ease}
+#peel.peeling .peeled-photo{transform:none}
+@media(prefers-reduced-motion:reduce){#peel .whole,#peel .peeled-photo{transition:none}}

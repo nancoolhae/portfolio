@@ -35,10 +35,10 @@
 
   /* 4. 세 단계 인트로 상태 머신.
    * 1·2번째 입력: scale(1) → scale(.91,.88) → scale(1).
-   * 3번째 입력: 실제 귤 사진의 좌우 껍질 레이어를 열고 실사 속살로 전환.
+   * 3번째 입력: 통귤과 껍질이 벗겨진 실사 사진을 교차 페이드.
    * 인트로에서만 wheel/touch 기본 스크롤을 잠깐 보류하고 이후 자연 스크롤로 복귀.
    * 페이지 내 링크·건너뛰기·깊은 링크는 즉시 통과시켜 내비게이션을 막지 않는다.
-   * 180ms 무입력 간격과 애니메이션 잠금으로 트랙패드 관성 중복 카운트를 방지한다. */
+   * 애니메이션 중 입력은 누적하지 않고, 완료 후 다음 휠 입력부터 다시 인식한다. */
   const fruit = $('#peel');
   const home = $('#home');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -97,17 +97,17 @@
     }
   }
   fruit.addEventListener('click',advanceIntro);
-  let lastWheel = 0, wheelDistance = 0, wheelConsumed = false;
+  let lastWheel = 0, wheelDistance = 0;
   window.addEventListener('wheel',event => {
     // Ctrl+wheel 줌, 가로 제스처, 상단으로의 이동은 가로채지 않는다.
     if (event.ctrlKey || event.deltaY <= 0 || Math.abs(event.deltaX) > Math.abs(event.deltaY) || !atIntro()) return;
     event.preventDefault();
     const now = performance.now();
-    if (now - lastWheel > 180) {wheelDistance = 0;wheelConsumed = false;}
+    if (now - lastWheel > 180) wheelDistance = 0;
     lastWheel = now;
-    if (introBusy || wheelConsumed) return;
+    if (introBusy) {wheelDistance = 0;return;}
     wheelDistance += event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? innerHeight : 1);
-    if (wheelDistance >= 55) {wheelConsumed = true;advanceIntro();}
+    if (wheelDistance >= 55) {wheelDistance = 0;advanceIntro();}
   },{passive:false});
   let touchStartY = null, touchStartX = null, touchConsumed = false;
   window.addEventListener('touchstart',event => {
