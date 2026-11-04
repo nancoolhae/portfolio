@@ -169,3 +169,8 @@ body{font-family:'Pretendard',system-ui,sans-serif;background:#FAFAFA}em{color:v
 #peel .peeled-photo{transform:none;transition:opacity .85s ease}
 #peel.peeling .peeled-photo{transform:none}
 @media(prefers-reduced-motion:reduce){#peel .whole,#peel .peeled-photo{transition:none}}
+
+/* 저작권과 제작 안내를 같은 서체 및 기준선으로 정렬한다. */
+.portfolio-footer .footer-bottom{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
+.footer-bottom>span{font:inherit;color:inherit}
+.contact-icon img{display:block;width:20px;height:20px;object-fit:contain}
