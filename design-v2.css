@@ -174,3 +174,6 @@ body{font-family:'Pretendard',system-ui,sans-serif;background:#FAFAFA}em{color:v
 .portfolio-footer .footer-bottom{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
 .footer-bottom>span{font:inherit;color:inherit}
 .contact-icon img{display:block;width:20px;height:20px;object-fit:contain}
+
+.portfolio-footer .footer-bottom{padding-right:64px}
+@media(max-width:740px){.portfolio-footer .footer-bottom{padding-right:40px}}
