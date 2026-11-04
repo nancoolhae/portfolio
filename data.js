@@ -7,8 +7,8 @@ window.PORTFOLIO = {
     "address": "서울시 관악구"
   },
   "documents": {
-    "resume": null,
-    "letter": null
+    "resume": "files/김아현_이력서.pdf",
+    "letter": "files/김아현_자기소개서.pdf"
   },
   "projects": [
     {
