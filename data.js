@@ -783,7 +783,6 @@ window.PORTFOLIO = {
       "label": "함께 고민해 단맛을 키운 천혜향",
       "projects": [
         "effort",
-        "effort-screen",
         "compass"
       ]
     },
