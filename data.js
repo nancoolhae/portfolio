@@ -278,7 +278,7 @@ window.PORTFOLIO = {
     },
     {
       "name": "하나투어",
-      "prefix": "하나투어 앱 UI/UX 개선",
+      "prefix": "하나투어 앱 UX/UI 개선",
       "period": "2026.09.03~2026.12.17",
       "team": "3명",
       "role": "팀장, 리서치, 요구사항 분석, 정보 구조 및 화면설계서 작성",
@@ -316,7 +316,7 @@ window.PORTFOLIO = {
       "base": "hanatour",
       "type": "보고서",
       "popup": "pop_up-05",
-      "title": "하나투어 앱 UI/UX 개선 보고서",
+      "title": "하나투어 앱 UX/UI 개선 보고서",
       "featured": false,
       "previews": [],
       "file": null,
@@ -330,8 +330,8 @@ window.PORTFOLIO = {
           "file": null
         }
       ],
-      "image": "assets/covers/hanatour.webp",
-      "imageAlt": "하나투어 앱 UI/UX 개선 보고서 표지"
+      "image": "assets/covers/hanatour-ux-ui.webp",
+      "imageAlt": "하나투어 앱 UX/UI 개선 보고서 표지"
     },
     {
       "name": "킨더가든",
@@ -454,7 +454,7 @@ window.PORTFOLIO = {
         "화면설계서"
       ],
       "summary": "거절이 어려운 사회초년생이 AI와 실전처럼 연습하며, 단단하게 의사를 표현하는 힘을 기르는 거절 훈련 서비스",
-      "image": "assets/covers/effort-screen.webp",
+      "image": "assets/covers/effort-screen-v2.webp",
       "color": "blue",
       "story": [
         {
@@ -676,7 +676,7 @@ window.PORTFOLIO = {
     },
     {
       "name": "하나투어",
-      "prefix": "하나투어 앱 UI/UX 개선",
+      "prefix": "하나투어 앱 UX/UI 개선",
       "period": "2026.09.03~2026.12.17",
       "team": "3명",
       "role": "팀장, 리서치, 요구사항 분석, 정보 구조 및 화면설계서 작성",
@@ -715,7 +715,7 @@ window.PORTFOLIO = {
       "base": "hanatour",
       "type": "화면설계서",
       "popup": "pop_up-12",
-      "title": "하나투어 앱 UI/UX 개선 화면설계서",
+      "title": "하나투어 앱 UX/UI 개선 화면설계서",
       "featured": false,
       "previews": [],
       "file": null,
