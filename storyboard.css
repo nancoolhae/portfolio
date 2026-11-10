@@ -142,3 +142,8 @@ a[href],button:not(:disabled),summary,label[for],[role="button"],.project-card[d
   #gnb a{padding-block:15px}
   #gnb a+a{border-top:1px solid #e5e5e5}
 }
+
+/* 세로 표지에서 제목이 있는 상단을 가로 카드 비율에 맞춰 보여준다. */
+.all-projects [data-project="khidi"] .card-visual img{
+  object-position:50% 22%;
+}

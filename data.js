@@ -153,7 +153,56 @@ window.PORTFOLIO = {
       "popup": "pop_up-02",
       "title": "사용성 평가 기반 투썸하트 앱 ‘영수증 적립’ 기능 진입 경로 개선 보고서",
       "featured": true,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/twosome/01.webp",
+          "alt": "사용성 휴리스틱 기반 문제 제언과 기존 영수증 적립 경로",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/02.webp",
+          "alt": "사용성 평가 참가자 선정 기준과 태스크 및 시나리오",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/03.webp",
+          "alt": "기존 메뉴 접근 과정의 참가자별 아이트래킹 데이터 분석",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/04.webp",
+          "alt": "사용성 평가로 검증한 문제와 주요 발견",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/05.webp",
+          "alt": "벤치마킹 결과와 개선안 및 프로젝트 목표의 연결",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/06.webp",
+          "alt": "홈 화면과 메뉴 목록에서 영수증 적립으로 진입하는 디지털 프로토타입",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/07.webp",
+          "alt": "개선안 메뉴의 2차 아이트래킹 데이터 분석",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "src": "assets/previews/twosome/08.webp",
+          "alt": "개선 전후 성공률과 태스크 수행 시간 비교",
+          "width": 1600,
+          "height": 900
+        }
+      ],
       "file": null,
       "skills": "사용성 테스트 · 아이트래킹",
       "downloads": [
@@ -217,7 +266,9 @@ window.PORTFOLIO = {
           "label": "전체 문서 내려받기",
           "file": null
         }
-      ]
+      ],
+      "image": "assets/covers/khidi-document.webp",
+      "imageAlt": "KHIDI 대표 홈페이지 UI/UX 개편 사업 제안서 표지"
     },
     {
       "name": "COMPASS",
@@ -389,57 +440,6 @@ window.PORTFOLIO = {
         }
       ],
       "imageAlt": "남양주 마을정원 기반 돌봄 서비스 “킨더가든” 기획서 표지"
-    },
-    {
-      "name": "쿠팡 프레시",
-      "prefix": "쿠팡 프레시 웹사이트 메인 화면 리뉴얼",
-      "period": "2025.11.07~2025.12.12",
-      "team": "6명",
-      "role": "정보 구조 및 화면설계서 작성",
-      "contribution": "25%",
-      "tags": [
-        "정보구조도",
-        "화면설계서"
-      ],
-      "summary": "사용자 조사와 경쟁사 분석을 바탕으로 쿠팡 로켓프레시의 정보구조와 UI를 개선한 메인 화면 리뉴얼 프로젝트",
-      "color": "mint",
-      "story": [
-        {
-          "label": "주물주물, 이렇게 달아졌어요.",
-          "title": "사용자 요구를 분석하고, 정보의 우선순위를 정해 화면에 반영하기",
-          "body": "사용자 조사와 경쟁사 분석을 통해 다양한 정보 중 무엇을 먼저 보여줘야 할지 고민했어요. 이 과정에서 단순히 화면을 보기 좋게 만드는 것이 아니라, 사용자의 실제 요구를 근거로 정보의 우선순위와 배치를 결정하는 방법을 배웠어요."
-        },
-        {
-          "label": "01 · 귤을 까기 전에",
-          "title": "다양한 상품과 혜택을 어떻게 하면 더 쉽게 탐색할 수 있을까?",
-          "body": "로켓프레시의 복잡한 카테고리와 과도한 프로모션 정보에 주목했어요. 사용자들이 원하는 상품과 혜택을 쉽게 찾을 수 있도록 정보구조와 메인 화면의 개선 필요성을 제기했어요."
-        },
-        {
-          "label": "02 · 껍질을 벗겨보니",
-          "title": "사용자에게 필요한 것은 더 많은 정보보다, 정돈된 정보 전달 방식이었습니다.",
-          "body": "117명을 대상으로 설문조사를 진행한 결과, 47%가 과도한 이벤트 정보를 불편하게 느낀다고 응답했어요. 주관식 답변과 경쟁사 분석을 통해 복잡한 카테고리와 높은 정보 밀도가 탐색을 방해한다는 점을 확인했어요."
-        },
-        {
-          "label": "03 · 알알이 채운 해결 과정",
-          "title": "조사에서 발견한 문제를 정보구조와 메인 화면 개선안에 반영했습니다.",
-          "body": "설문조사와 벤치마킹을 바탕으로 카테고리를 재분류하고 레이블링을 개선했어요. 프로모션과 추천 상품의 배치에 우선순위를 적용하고, 쿠팡의 브랜드 간 편리한 이동을 강화한 메인 화면 개선안을 설계했어요."
-        }
-      ],
-      "id": "coupang",
-      "base": "coupang",
-      "type": "화면설계서",
-      "popup": "pop_up-07",
-      "title": "쿠팡 프레시 웹사이트 메인 화면 리뉴얼 화면설계서",
-      "featured": false,
-      "previews": [],
-      "file": null,
-      "skills": "정보구조도 · 화면설계서",
-      "downloads": [
-        {
-          "label": "화면설계서 내려받기",
-          "file": null
-        }
-      ]
     },
     {
       "name": "NO력",
@@ -728,7 +728,9 @@ window.PORTFOLIO = {
           "label": "화면설계서 내려받기",
           "file": null
         }
-      ]
+      ],
+      "image": "assets/covers/hanatour-screen-document.webp",
+      "imageAlt": "하나투어 앱 UX/UI 개선 모바일 화면설계서 표지"
     }
   ],
   "categories": [
@@ -742,7 +744,6 @@ window.PORTFOLIO = {
         "compass",
         "hanatour",
         "kindergarden",
-        "coupang",
         "effort-screen",
         "twosome-screen",
         "compass-screen",
@@ -790,7 +791,6 @@ window.PORTFOLIO = {
       "id": "screen",
       "label": "기획의 알맹이를 화면에 담은 한라봉",
       "projects": [
-        "coupang",
         "effort-screen",
         "twosome-screen",
         "compass-screen",

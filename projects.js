@@ -44,6 +44,20 @@
   }
   function closeDetail(){history.replaceState(null,'',location.pathname+location.search+(returnHash||''));route();}
   $('#detail-close').addEventListener('click',closeDetail);
+  function isBackdrop(event){
+    if(event.target!==dialog)return false;
+    const {left,right,top,bottom}=dialog.getBoundingClientRect();
+    return event.clientX<left || event.clientX>=right ||
+      event.clientY<top || event.clientY>=bottom;
+  }
+  let startedOnBackdrop=false;
+  dialog.addEventListener('pointerdown',event=>{
+    startedOnBackdrop=event.button===0 && isBackdrop(event);
+  });
+  dialog.addEventListener('click',event=>{
+    if(startedOnBackdrop && isBackdrop(event))closeDetail();
+    startedOnBackdrop=false;
+  });
   dialog.addEventListener('cancel',e=>{e.preventDefault();closeDetail();});
   body.addEventListener('click',e=>{const b=e.target.closest('[data-missing-download]');if(b)$('#download-status').textContent=`${b.dataset.missingDownload}: 원본 파일을 준비하고 있습니다.`;});
   addEventListener('hashchange',route);route();
