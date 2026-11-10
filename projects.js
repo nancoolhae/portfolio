@@ -3,7 +3,7 @@
   'use strict';
   const data=window.PORTFOLIO, $=s=>document.querySelector(s);
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const allPage=document.body.dataset.page==='all-projects',grid=$('#project-grid'),filters=$('#project-filters'),dialog=$('#project-dialog'),body=$('#project-detail');
+  const allPage=document.body.dataset.page==='all-projects',grid=$('#project-grid'),filters=$('#project-filters'),dialog=$('#project-dialog'),body=$('#project-detail'),initialTitle=document.title;
   const aliases={'전체':'all','대표':'featured','대표 프로젝트':'featured','스토리보드':'screen','화면설계서':'screen'};
   const requested=new URLSearchParams(location.search).get('filter')||'all';
   let selected=allPage?(aliases[requested]||requested):'featured';
@@ -44,9 +44,9 @@
     if(p){
       if(!dialog.open){previousFocus=document.activeElement;savedY=scrollY;if(event?.oldURL){const oldHash=new URL(event.oldURL).hash;if(!oldHash.startsWith('#project/'))returnHash=oldHash;}}
       $('#detail-title').textContent=p.title;$('#detail-summary').textContent=p.summary;body.innerHTML=detailMarkup(p);
-      if(!dialog.open)dialog.showModal();document.body.classList.add('modal-open');body.scrollTop=0;$('#detail-title').focus({preventScroll:true});
+      if(!dialog.open)dialog.showModal();document.body.classList.add('modal-open');body.scrollTop=0;$('#detail-title').focus({preventScroll:true});document.title=`${p.title} · 잘 익은 귤 김아현`;
     }else{
-      if(dialog.open){dialog.close();document.body.classList.remove('modal-open');scrollTo({top:savedY,behavior:'instant'});if(previousFocus?.isConnected&&previousFocus!==document.body)previousFocus.focus({preventScroll:true});}
+      if(dialog.open){dialog.close();document.body.classList.remove('modal-open');document.title=initialTitle;scrollTo({top:savedY,behavior:'instant'});if(previousFocus?.isConnected&&previousFocus!==document.body)previousFocus.focus({preventScroll:true});}
       returnHash=location.hash;
     }
   }
