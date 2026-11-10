@@ -752,7 +752,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "featured",
-      "label": "가장 달게 익은 귤들",
+      "label": "가장 달게 익은 귤",
       "projects": [
         "effort",
         "twosome",
