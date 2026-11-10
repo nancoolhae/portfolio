@@ -427,7 +427,56 @@ window.PORTFOLIO = {
       "popup": "pop_up-06",
       "title": "남양주 마을정원 기반 돌봄 서비스 “킨더가든” 기획서",
       "featured": false,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/kindergarden/01.webp",
+          "alt": "남양주시 지역 문제와 지역 선정 근거",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/02.webp",
+          "alt": "서비스 아이디어를 구체화한 브레인라이팅",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/03.webp",
+          "alt": "돌봄 수요와 시니어 인력, 마을정원을 연결한 서비스 구조",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/04.webp",
+          "alt": "부모와 시니어를 위한 프로젝트 목표와 밸류 매트릭스",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/05.webp",
+          "alt": "서비스 아이디어를 분류하는 카드소팅",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/06.webp",
+          "alt": "부모, 어린이, 시니어의 사용자 여정 지도",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/07.webp",
+          "alt": "남양주시 별내동에서 진행한 시니어 심층 인터뷰",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/kindergarden/08.webp",
+          "alt": "남양주시 다산동 어린이집 주변과 놀이터 현장 관찰",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
       "file": null,
       "downloads": [
         {
