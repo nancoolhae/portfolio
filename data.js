@@ -222,7 +222,7 @@ window.PORTFOLIO = {
       "prefix": "KHIDI 대표 홈페이지 UI/UX 개편",
       "period": "2026.09.03~2026.12.10",
       "team": "2명",
-      "role": "RFP 분석, 제안 전략 수립, AI 레드팀",
+      "role": "RFP 분석, 벤치마킹, 정보구조 설계, AI 레드팀",
       "contribution": "50%",
       "tags": [
         "RFP 분석",
@@ -258,7 +258,56 @@ window.PORTFOLIO = {
       "popup": "pop_up-03",
       "title": "KHIDI 대표 홈페이지 UI/UX 개편 제안서",
       "featured": false,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/khidi/01.webp",
+          "alt": "모바일 홈페이지의 정보 탐색 문제",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/02.webp",
+          "alt": "홈페이지 개편의 세 가지 추진 전략",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/03.webp",
+          "alt": "PC와 모바일에서 직접 확인한 여섯 가지 문제",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/04.webp",
+          "alt": "유사 기관 홈페이지 벤치마킹",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/05.webp",
+          "alt": "사용자 분석과 네 가지 이용 목적",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/06.webp",
+          "alt": "PC와 모바일의 접근 경로를 통일한 개선안",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/07.webp",
+          "alt": "역할 분담, 150일 추진 일정과 예산",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/khidi/08.webp",
+          "alt": "홈페이지 개편 핵심 제안과 기대효과",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
       "file": null,
       "skills": "RFP 분석 · 제안전략 수립",
       "downloads": [
@@ -479,7 +528,7 @@ window.PORTFOLIO = {
           "file": null
         }
       ],
-      "image": "assets/covers/hanatour-ux-ui.webp",
+      "image": "assets/covers/hanatour-report-cover.webp",
       "imageAlt": "하나투어 앱 UX/UI 개선 보고서 표지"
     },
     {
