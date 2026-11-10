@@ -312,7 +312,56 @@ window.PORTFOLIO = {
       "popup": "pop_up-04",
       "title": "비교를 성장의 기회로 바꾸는 어플리케이션 “COMPASS” 기획서",
       "featured": true,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/compass/01.webp",
+          "alt": "COMPASS 프로젝트 개요와 서비스 화면",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/02.webp",
+          "alt": "COMPASS 비교가 행동으로 이어지지 않는 이유",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/03.webp",
+          "alt": "COMPASS 프로젝트 목표와 세 가지 방향",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/04.webp",
+          "alt": "COMPASS 3C 분석과 서비스 기회",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/05.webp",
+          "alt": "COMPASS 타인과의 비교에 관한 설문조사",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/06.webp",
+          "alt": "COMPASS 세 가지 핵심 니즈와 필요 기능",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/07.webp",
+          "alt": "COMPASS 사용자 여정 지도",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/compass/08.webp",
+          "alt": "COMPASS MVP의 네 단계 핵심 사용자 경험",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
       "file": null,
       "downloads": [
         {

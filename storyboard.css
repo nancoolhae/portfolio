@@ -79,6 +79,8 @@
 .preview-pending h3{font-size:16px;margin-bottom:10px}
 .preview-pending p{font-size:14px;color:#777;line-height:1.7}
 .preview-pending .preview-note{font-size:12px;margin-top:6px}
+.project-downloads-top{margin-bottom:22px}
+.project-downloads-top .download-status:empty{margin:0;min-height:0}
 .project-downloads{display:flex;flex-wrap:wrap;gap:12px}
 .project-downloads .button{width:240px;max-width:100%;font-size:13px;padding:13px 18px;border-radius:10px;gap:10px}
 .pending-download{background:#f3f3f3;color:#777;border-color:#ddd;cursor:default}

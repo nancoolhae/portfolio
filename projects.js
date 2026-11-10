@@ -28,8 +28,16 @@
   function downloadButton(item){const file=localFile(item.file);return file?`<a class="button primary" href="${esc(file)}" download>${esc(item.label)} ↓</a>`:`<button class="button pending-download" type="button" aria-disabled="true" data-missing-download="${esc(item.label)}">${esc(item.label)} <span class="download-state">등록 예정</span></button>`;}
   function detailMarkup(p){
     const meta=[['구분',p.type],['기간',p.period],['진행 인원',p.team],['담당 역할',p.role],['기여도',p.contribution],['활용 역량',p.skills]];
+    // 상단에는 두 문서 유형을 표시하고, 하단은 프로젝트별 기존 목록을 사용한다.
+    const topDownloads = ['전체 문서 내려받기', '화면설계서 내려받기'].map(label =>
+      p.downloads.find(item => item.label === label) ?? {label, file: null}
+    );
+    const topDownloadMarkup = `<div class="project-downloads-top">
+      <div class="project-downloads" role="group" aria-label="프로젝트 소개 아래 문서 내려받기">${topDownloads.map(downloadButton).join('')}</div>
+      <p class="download-status" role="status"></p>
+    </div>`;
     const previews=p.previews.filter(item=>localFile(typeof item==='string'?item:item.src));
-    return `<dl class="project-facts">${meta.map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><div class="project-stories">${p.story.map((s,i)=>`<section class="project-story ${i===0?'story-growth':''}"><p class="story-label">${esc(s.label)}</p><h3>${esc(s.title)}</h3><p>${esc(s.body)}</p></section>`).join('')}</div><section class="project-previews" aria-label="문서 미리보기"><h3 class="preview-title">귤 맛보기 <img class="preview-emoji" src="assets/tangerine-ios.png" alt="" aria-hidden="true" width="24" height="24"></h3>${previews.length?previews.map((item,i)=>{const src=typeof item==='string'?item:item.src;return `<figure><img src="${esc(src)}" alt="${esc(typeof item==='string'?p.title+' 주요 장표 '+(i+1):item.alt)}"${typeof item!=='string' && item.width && item.height ? ` width="${Number(item.width)}" height="${Number(item.height)}"` : ''} loading="lazy"></figure>`;}).join(''):`<div class="preview-pending"><h3>문서 미리보기</h3><p>주요 장표를 준비하고 있어요.</p><p class="preview-note">현재는 프로젝트의 기획 과정과 역할을 위에서 확인하실 수 있습니다.</p></div>`}</section><div class="project-downloads">${p.downloads.map(downloadButton).join('')}</div><p id="download-status" class="download-status" role="status"></p>`;
+    return `<dl class="project-facts">${meta.map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>${topDownloadMarkup}<div class="project-stories">${p.story.map((s,i)=>`<section class="project-story ${i===0?'story-growth':''}"><p class="story-label">${esc(s.label)}</p><h3>${esc(s.title)}</h3><p>${esc(s.body)}</p></section>`).join('')}</div><section class="project-previews" aria-label="문서 미리보기"><h3 class="preview-title">귤 맛보기 <img class="preview-emoji" src="assets/tangerine-ios.png" alt="" aria-hidden="true" width="24" height="24"></h3>${previews.length?previews.map((item,i)=>{const src=typeof item==='string'?item:item.src;return `<figure><img src="${esc(src)}" alt="${esc(typeof item==='string'?p.title+' 주요 장표 '+(i+1):item.alt)}"${typeof item!=='string' && item.width && item.height ? ` width="${Number(item.width)}" height="${Number(item.height)}"` : ''} loading="lazy"></figure>`;}).join(''):`<div class="preview-pending"><h3>문서 미리보기</h3><p>주요 장표를 준비하고 있어요.</p><p class="preview-note">현재는 프로젝트의 기획 과정과 역할을 위에서 확인하실 수 있습니다.</p></div>`}</section><div class="project-downloads">${p.downloads.map(downloadButton).join('')}</div><p id="download-status" class="download-status" role="status"></p>`;
   }
   function route(event){
     const id=location.hash.startsWith('#project/')?location.hash.slice(9):null,p=data.projects.find(p=>p.id===id);
@@ -59,7 +67,7 @@
     startedOnBackdrop=false;
   });
   dialog.addEventListener('cancel',e=>{e.preventDefault();closeDetail();});
-  body.addEventListener('click',e=>{const b=e.target.closest('[data-missing-download]');if(b)$('#download-status').textContent=`${b.dataset.missingDownload}: 원본 파일을 준비하고 있습니다.`;});
+  body.addEventListener('click',e=>{const b=e.target.closest('[data-missing-download]');if(b)b.closest('.project-downloads').nextElementSibling.textContent=`${b.dataset.missingDownload}: 원본 파일을 준비하고 있습니다.`;});
   addEventListener('hashchange',route);route();
   if(allPage){
     const toggle=$('#menu-toggle'),closeMenu=()=>{$('#gnb').classList.remove('open');toggle.setAttribute('aria-expanded','false');};
