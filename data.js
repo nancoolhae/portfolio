@@ -418,7 +418,56 @@ window.PORTFOLIO = {
       "popup": "pop_up-05",
       "title": "하나투어 앱 UX/UI 개선 보고서",
       "featured": false,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/hanatour/01.webp",
+          "alt": "메뉴 분류와 서비스 탐색 문제",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/02.webp",
+          "alt": "1차 사용성 테스트 준비와 태스크",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/03.webp",
+          "alt": "사용성 테스트 성공률과 수행 시간 분석",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/04.webp",
+          "alt": "국내 숙박 페이지 접근 시선 추적 결과",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/05.webp",
+          "alt": "사용성 평가를 바탕으로 작성한 요구사항 정의서",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/06.webp",
+          "alt": "여행 목적에 맞춘 홈과 카테고리의 가치 제안",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/07.webp",
+          "alt": "정보구조 및 화면 재설계 기능 정의서",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/hanatour/08.webp",
+          "alt": "개선된 홈 화면과 국내외 항공 진입 경로",
+          "width": 1920,
+          "height": 1080
+        }
+      ],
       "file": null,
       "downloads": [
         {
