@@ -4,7 +4,7 @@
   'use strict';
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const targets=[
-    '.introduction-copy','.introduction-fruit','.section-head',
+    '.section-head',
     '.career-sidebar','.career-records','.sweetness>.eyebrow','.sweetness>h2',
     '.sweetness-tool','.sweetness-legend','.about-inner>.eyebrow','.about-inner>h2',
     '.about-strength','.about-stories article','.contact-heading','#contact-form',

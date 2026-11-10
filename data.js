@@ -23,7 +23,7 @@ window.PORTFOLIO = {
         "벤치마킹"
       ],
       "summary": "거절이 어려운 사회초년생이 AI와 실전처럼 연습하며, 단단하게 의사를 표현하는 힘을 기르는 거절 훈련 서비스",
-      "image": "assets/covers/effort.png",
+      "image": "assets/covers/effort.webp",
       "color": "blue",
       "story": [
         {
@@ -55,46 +55,46 @@ window.PORTFOLIO = {
       "featured": true,
       "previews": [
         {
-          "src": "assets/previews/effort/01.png",
+          "src": "assets/previews/effort/01.webp",
           "alt": "프로젝트 배경: 소통과 거절의 어려움",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         },
         {
-          "src": "assets/previews/effort/02.png",
+          "src": "assets/previews/effort/02.webp",
           "alt": "프로젝트 목표: 거절은 단단하게, 마음은 튼튼하게",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         },
         {
-          "src": "assets/previews/effort/03.png",
+          "src": "assets/previews/effort/03.webp",
           "alt": "차별화 전략: 실전 훈련과 마음 근력",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         },
         {
-          "src": "assets/previews/effort/04.png",
+          "src": "assets/previews/effort/04.webp",
           "alt": "UX Writing 전략 1·2: 성장 마인드셋과 행동 모델",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         },
         {
-          "src": "assets/previews/effort/05.png",
+          "src": "assets/previews/effort/05.webp",
           "alt": "UX Writing 전략 3·4: 작은 승리와 자기결정성",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         },
         {
-          "src": "assets/previews/effort/06.png",
+          "src": "assets/previews/effort/06.webp",
           "alt": "서비스 상황별 UX Writing 적용 사례",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         },
         {
-          "src": "assets/previews/effort/07.png",
+          "src": "assets/previews/effort/07.webp",
           "alt": "핵심 기능: 속마음 X-Ray",
-          "width": 3840,
-          "height": 2160
+          "width": 1920,
+          "height": 1080
         }
       ],
       "file": null,
@@ -123,7 +123,7 @@ window.PORTFOLIO = {
         "아이트래킹"
       ],
       "summary": "사용성 평가를 통해 투썸하트 앱 ‘영수증 적립’ 접근 경로의 문제를 검증하고, 개선한 정보 구조의 효과를 재검증함",
-      "image": "assets/covers/twosome.png",
+      "image": "assets/covers/twosome.webp",
       "color": "wine",
       "story": [
         {
@@ -273,7 +273,7 @@ window.PORTFOLIO = {
           "file": null
         }
       ],
-      "image": "assets/covers/compass.png",
+      "image": "assets/covers/compass.webp",
       "imageAlt": "비교를 성장의 기회로 바꾸는 어플리케이션 “COMPASS” 기획서 표지"
     },
     {
@@ -330,7 +330,7 @@ window.PORTFOLIO = {
           "file": null
         }
       ],
-      "image": "assets/covers/hanatour.png",
+      "image": "assets/covers/hanatour.webp",
       "imageAlt": "하나투어 앱 UI/UX 개선 보고서 표지"
     },
     {
@@ -346,7 +346,7 @@ window.PORTFOLIO = {
       ],
       "skills": "에스노그래피 · 카드소팅 · 브레인라이팅 · 심층인터뷰",
       "summary": "시니어 가드너와 아이를 연결해 마을정원 활동과 돌봄을 제공하는 지역 기반 서비스 기획 프로젝트",
-      "image": "assets/covers/kindergarden.png",
+      "image": "assets/covers/kindergarden.webp",
       "color": "green",
       "story": [
         {
@@ -454,7 +454,7 @@ window.PORTFOLIO = {
         "화면설계서"
       ],
       "summary": "거절이 어려운 사회초년생이 AI와 실전처럼 연습하며, 단단하게 의사를 표현하는 힘을 기르는 거절 훈련 서비스",
-      "image": "assets/covers/effort-screen.png",
+      "image": "assets/covers/effort-screen.webp",
       "color": "blue",
       "story": [
         {
@@ -512,7 +512,7 @@ window.PORTFOLIO = {
         "화면설계서"
       ],
       "summary": "사용성 평가를 통해 투썸하트 앱 ‘영수증 적립’ 접근 경로의 문제를 검증하고, 개선한 정보 구조의 효과를 재검증함",
-      "image": "assets/covers/twosome-screen.png",
+      "image": "assets/covers/twosome-screen.webp",
       "color": "wine",
       "story": [
         {
@@ -613,7 +613,7 @@ window.PORTFOLIO = {
           "file": null
         }
       ],
-      "image": "assets/covers/compass-screen.png",
+      "image": "assets/covers/compass-screen.webp",
       "imageAlt": "비교를 성장의 기회로 바꾸는 어플리케이션 “COMPASS” 화면설계서 표지"
     },
     {
@@ -630,7 +630,7 @@ window.PORTFOLIO = {
       ],
       "skills": "레이블링 · 정보구조도 · 화면설계서",
       "summary": "시니어 가드너와 아이를 연결해 마을정원 활동과 돌봄을 제공하는 지역 기반 서비스 기획 프로젝트",
-      "image": "assets/covers/kindergarden-screen.png",
+      "image": "assets/covers/kindergarden-screen.webp",
       "color": "green",
       "story": [
         {

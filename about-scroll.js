@@ -6,7 +6,7 @@ const fruit=name=>section.querySelector('.about-fruit.'+name),copies=[...section
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const clamp=x=>Math.max(0,Math.min(1,x)),smooth=x=>{x=clamp(x);return x*x*(3-2*x)},phase=(p,a,b)=>smooth((p-a)/(b-a));
 let metrics,queued=false;
-function measure(){const hero=document.querySelector('#peel .fruit-scene');const size=Math.min((hero?.getBoundingClientRect().width||360)*.86,innerHeight*.36);section.style.setProperty('--rolling-fruit-size',size+'px');metrics={size,start:section.getBoundingClientRect().top+scrollY-(parseFloat(getComputedStyle(frame).top)||0),length:Math.max(1,section.offsetHeight-frame.offsetHeight)};render()}
+function measure(){const preferredWidth=innerWidth<=740?Math.min(340,Math.max(240,innerWidth*.62)):360;const size=Math.min(preferredWidth*.86,innerHeight*.36);section.style.setProperty('--rolling-fruit-size',size+'px');metrics={size,start:section.getBoundingClientRect().top+scrollY-(parseFloat(getComputedStyle(frame).top)||0),length:Math.max(1,section.offsetHeight-frame.offsetHeight)};render()}
 function image(name,opacity,x=0,y=0,angle=0,sx=1,sy=sx){const el=fruit(name);el.style.opacity=opacity.toFixed(4);el.style.transform=`translate3d(${x}px,${y}px,0) rotate(${angle}deg) scale(${sx},${sy})`}
 function render(){queued=false;if(!metrics||reduced.matches)return;const {size,start,length}=metrics,p=clamp((scrollY-start)/length),roll=phase(p,.005,.16),join=phase(p,.835,.95),fit=Math.min(1,(stage.clientWidth-24)/(size*3.95));const scale=1+(fit-1)*join;section.style.setProperty('--group-scale',scale);
 // 섹션에 들어오면 귤이 바로 굴러오기 시작한다.
