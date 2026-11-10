@@ -101,6 +101,12 @@
 /* 제목 바로 아래에 소개를 두고, 날짜 줄은 카드 하단에 정렬한다. */
 :is(.featured-projects,.all-projects) .card-meta{min-height:0}
 :is(.featured-projects,.all-projects) .card-meta h3{min-height:0;margin-bottom:8px}
+:is(.featured-projects,.all-projects) .card-meta h3 a{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
 :is(.featured-projects,.all-projects) .card-meta p.card-summary{min-height:0;margin-bottom:16px}
 
 a[href],button:not(:disabled),summary,label[for],[role="button"],.project-card[data-project]{
