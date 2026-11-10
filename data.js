@@ -949,7 +949,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "featured",
-      "label": "가장 달게 익은 귤",
+      "label": "가장 달콤한 귤",
       "projects": [
         "effort",
         "twosome",
@@ -1020,15 +1020,21 @@ window.PORTFOLIO = {
     ],
     "수상 및 주요활동": [
       {
+        "year": "2026.11",
+        "title": "캡스톤디자인 PT 우수작 선정",
+        "text": "비교를 성장의 기회로 바꾸는 어플리케이션 \"COMPASS\"",
+        "resultDescription": true
+      },
+      {
         "year": "2026.07",
         "title": "제32회 커뮤니케이션디자인 국제 어워드 특선",
-        "text": "사회초년생 거절 연습 어플리케이션 “노력” 서비스",
+        "text": "사회초년생 거절 연습 어플리케이션 “NO력” 서비스",
         "resultDescription": true
       },
       {
         "year": "2026.06",
         "title": "디지털콘텐츠제작 부문 연합 PT 우수작 선정 및 발표",
-        "text": "사회초년생 거절 연습 어플리케이션 “노력” 서비스(기획서)",
+        "text": "사회초년생 거절 연습 어플리케이션 “NO력” 서비스(기획서)",
         "resultDescription": true
       },
       {
