@@ -176,3 +176,9 @@ body{font-family:'Pretendard',system-ui,sans-serif;background:#FAFAFA}em{color:v
 
 .portfolio-footer .footer-bottom{padding-right:64px}
 @media(max-width:740px){.portfolio-footer .footer-bottom{padding-right:40px}}
+
+/* 긴 문서 버튼 이름도 한 줄로 표시한다. */
+.intro-documents .button{white-space:nowrap}
+@media(hover:hover){
+  #career-filters button[aria-pressed=false]:hover{background:#e9e9e9}
+}

@@ -36,3 +36,6 @@ html[data-scroll-motion="ready"] .sweetness-tool[data-scroll-reveal="waiting"] .
 .featured-projects .all-projects-link{transition:transform .2s}
 .featured-projects .all-projects-link:hover{transform:translateY(-3px)}
 @media(prefers-reduced-motion:reduce){.featured-projects .all-projects-link:hover{transform:none}}
+
+/* 12 Brix 게이지에 미세한 시각적 차이를 둔다. */
+.sweetness-tool[data-brix="12"] .gauge-fill{opacity:.78}

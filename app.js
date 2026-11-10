@@ -21,12 +21,12 @@
   });
   renderCareer();
   // 사용자가 제공한 A4-8의 15 Brix 척도를 사용한다. 실제 과일 측정값이 아닌 역량 메타포.
-  $('#tools').innerHTML = data.tools.map(tool => `<div class="sweetness-tool"><span class="tool-symbol" aria-hidden="true">${esc(tool.icon)}</span><div><div class="sweetness-tool-heading"><h3>${esc(tool.name)}</h3></div><p>${esc(tool.description)}</p><div class="tool-meter-row"><span class="gauge-shell"><meter class="native-meter" min="0" max="15" value="${tool.brix}" aria-label="${esc(tool.name)} 역량 당도, 15 Brix 중 ${tool.brix} Brix">${tool.brix} / 15 Brix</meter><span class="gauge-track" aria-hidden="true"><span class="gauge-fill" style="--level:${tool.brix/15}"></span></span></span><span>${tool.brix} Brix</span></div></div></div>`).join('');
+  $('#tools').innerHTML = data.tools.map(tool => `<div class="sweetness-tool" data-brix="${tool.brix}"><span class="tool-symbol" aria-hidden="true">${esc(tool.icon)}</span><div><div class="sweetness-tool-heading"><h3>${esc(tool.name)}</h3></div><p>${esc(tool.description)}</p><div class="tool-meter-row"><span class="gauge-shell"><meter class="native-meter" min="0" max="15" value="${tool.brix}" aria-label="${esc(tool.name)} 역량 당도, 15 Brix 중 ${tool.brix} Brix">${tool.brix} / 15 Brix</meter><span class="gauge-track" aria-hidden="true"><span class="gauge-fill" style="--level:${tool.brix/15}"></span></span></span><span>${tool.brix} Brix</span></div></div></div>`).join('');
   // 소개 화면은 다운로드 대신 문서 보기. 원본 미등록 시 버튼 선택 후 상태를 안내한다.
   function documentButton(file,label) {
     return filePath(file) ? `<a class="button primary" href="${esc(file)}" download>${label} 보기</a>` : `<button class="button primary" type="button" aria-disabled="true" data-document-missing="${label}" title="${label} 파일 등록 예정">${label} 보기</button>`;
   }
-  $('#personal-downloads').innerHTML = documentButton(data.documents.resume,'이력서') + documentButton(data.documents.letter,'자기소개서');
+  $('#personal-downloads').innerHTML = documentButton(data.documents.resume,'알알이 채운 이력서') + documentButton(data.documents.letter,'속까지 깐 자기소개서');
   $('#personal-downloads').addEventListener('click',event=> {
     const button = event.target.closest('[data-document-missing]');
     if(button)$('#document-status').textContent = `${button.dataset.documentMissing} 파일은 등록 예정입니다.`;
