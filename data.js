@@ -73,6 +73,24 @@ window.PORTFOLIO = {
           "height": 1080
         },
         {
+          "src": "assets/previews/effort/benchmark-01.webp",
+          "alt": "동기부여 UX Writing과 사용자 행동 유도 방식 벤치마킹",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/effort/benchmark-02.webp",
+          "alt": "소통 기반 AI 상담 및 기존 거절 연습 서비스 벤치마킹",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "src": "assets/previews/effort/benchmark-03.webp",
+          "alt": "말하기 트레이닝 서비스의 학습 흐름과 반복 유도 방식 벤치마킹",
+          "width": 1920,
+          "height": 1080
+        },
+        {
           "src": "assets/previews/effort/04.webp",
           "alt": "UX Writing 전략 1·2: 성장 마인드셋과 행동 모델",
           "width": 1920,
@@ -87,12 +105,6 @@ window.PORTFOLIO = {
         {
           "src": "assets/previews/effort/06.webp",
           "alt": "서비스 상황별 UX Writing 적용 사례",
-          "width": 1920,
-          "height": 1080
-        },
-        {
-          "src": "assets/previews/effort/07.webp",
-          "alt": "핵심 기능: 속마음 X-Ray",
           "width": 1920,
           "height": 1080
         }
@@ -158,49 +170,57 @@ window.PORTFOLIO = {
           "src": "assets/previews/twosome/01.webp",
           "alt": "사용성 휴리스틱 기반 문제 제언과 기존 영수증 적립 경로",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "사용성 휴리스틱 기반 문제 제언"
         },
         {
           "src": "assets/previews/twosome/02.webp",
           "alt": "사용성 평가 참가자 선정 기준과 태스크 및 시나리오",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "1차 사용성 평가 계획"
         },
         {
           "src": "assets/previews/twosome/03.webp",
           "alt": "기존 메뉴 접근 과정의 참가자별 아이트래킹 데이터 분석",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "1차 사용성 테스트 및 아이트래킹 데이터 분석"
         },
         {
           "src": "assets/previews/twosome/04.webp",
           "alt": "사용성 평가로 검증한 문제와 주요 발견",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "사용성 평가 기반 문제 제언 검증 및 문제점 도출"
         },
         {
           "src": "assets/previews/twosome/05.webp",
           "alt": "벤치마킹 결과와 개선안 및 프로젝트 목표의 연결",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "벤치마킹 기반 개선안 목표 확인"
         },
         {
           "src": "assets/previews/twosome/06.webp",
           "alt": "홈 화면과 메뉴 목록에서 영수증 적립으로 진입하는 디지털 프로토타입",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "개선안 디지털 프로토타이핑"
         },
         {
           "src": "assets/previews/twosome/07.webp",
           "alt": "개선안 메뉴의 2차 아이트래킹 데이터 분석",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "2차 사용성 테스트 및 아이트래킹 데이터 분석"
         },
         {
           "src": "assets/previews/twosome/08.webp",
           "alt": "개선 전후 성공률과 태스크 수행 시간 비교",
           "width": 1600,
-          "height": 900
+          "height": 900,
+          "caption": "2차 사용성 평가 기반 개선안 검증"
         }
       ],
       "file": null,

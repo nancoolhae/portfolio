@@ -149,3 +149,6 @@ a[href],button:not(:disabled),summary,label[for],[role="button"],.project-card[d
 .all-projects [data-project="khidi"] .card-visual img{
   object-position:50% 22%;
 }
+
+/* 문서 이미지에 등록된 설명을 작게 표시한다. */
+.project-previews figcaption{margin-top:8px;font-size:13px;line-height:1.6;color:#666}
