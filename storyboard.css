@@ -3,12 +3,12 @@
 .introduction{grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:35px}
 .introduction h1{font-size:clamp(24px,2.2vw,36px)}
 .introduction h1 span{white-space:normal}
-.featured-projects .card-date .card-document-type{font-size:11px;color:#888}
+:is(.featured-projects,.all-projects) .card-date .card-document-type{font-size:11px;color:#888}
 .featured-projects .card-date,.all-projects .card-date{gap:8px;flex-wrap:wrap;justify-content:space-between;font-size:11px}
-.featured-projects .card-meta h3{min-height:72px}
+
 .all-projects .project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .all-projects h1{font-size:clamp(30px,3vw,44px)}
-.all-projects .card-meta h3{font-size:17px;line-height:1.5;min-height:76px}
+.all-projects .card-meta h3{font-size:17px;line-height:1.5}
 .all-projects .card-summary{font-size:13px}
 .all-projects .filters{max-width:1100px;gap:10px}
 .all-projects .filters button{font-size:13px;line-height:1.5;white-space:normal;text-align:left}
@@ -68,9 +68,9 @@
 .pending-download:hover{transform:none}
 .download-state{font-size:11px;white-space:nowrap}
 .download-status{font-size:12px;color:#777;margin-top:10px;min-height:20px}
-@media(max-width:1000px){.sweetness-tools{gap:30px}.sweetness-tool{grid-template-columns:46px minmax(0,1fr);gap:12px}.tool-symbol{width:46px;height:46px;font-size:19px}.all-projects .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.featured-projects .card-meta h3{min-height:96px}}
-@media(max-width:740px){.introduction{grid-template-columns:1fr;gap:24px}.introduction h1{font-size:clamp(22px,4.7vw,30px)}.featured-projects .card-meta h3{min-height:0}.sweetness-tools{grid-template-columns:1fr;gap:26px}.sweetness-tool p{min-height:0}.sweetness-legend{line-height:1.8}.about-strength{grid-template-columns:1fr;gap:15px;padding:22px}.about-strength img{width:130px;justify-self:center}.about-strength h3{font-size:20px}.about-strength p{font-size:14px}.about-stories article:last-child{border-bottom:1px solid #ddd;padding-bottom:26px}#project-dialog{width:calc(100% - 20px);height:calc(100svh - 24px);max-height:calc(100svh - 24px);border-radius:12px}.detail-header{padding:18px 16px 14px;gap:8px}.detail-header h2{font-size:17px}.detail-header p{font-size:11px}#project-detail.detail-body{padding:20px 16px}.project-facts{font-size:13px}.project-facts>div{grid-template-columns:70px minmax(0,1fr);gap:9px}.project-story{padding:18px}.project-story h3{font-size:16px}.project-story>p:last-child{font-size:13px}}
-@media(max-width:520px){.all-projects .project-grid{grid-template-columns:1fr}.all-projects .card-meta h3{min-height:0}}
+@media(max-width:1000px){.sweetness-tools{gap:30px}.sweetness-tool{grid-template-columns:46px minmax(0,1fr);gap:12px}.tool-symbol{width:46px;height:46px;font-size:19px}.all-projects .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){.introduction{grid-template-columns:1fr;gap:24px}.introduction h1{font-size:clamp(22px,4.7vw,30px)}.sweetness-tools{grid-template-columns:1fr;gap:26px}.sweetness-tool p{min-height:0}.sweetness-legend{line-height:1.8}.about-strength{grid-template-columns:1fr;gap:15px;padding:22px}.about-strength img{width:130px;justify-self:center}.about-strength h3{font-size:20px}.about-strength p{font-size:14px}.about-stories article:last-child{border-bottom:1px solid #ddd;padding-bottom:26px}#project-dialog{width:calc(100% - 20px);height:calc(100svh - 24px);max-height:calc(100svh - 24px);border-radius:12px}.detail-header{padding:18px 16px 14px;gap:8px}.detail-header h2{font-size:17px}.detail-header p{font-size:11px}#project-detail.detail-body{padding:20px 16px}.project-facts{font-size:13px}.project-facts>div{grid-template-columns:70px minmax(0,1fr);gap:9px}.project-story{padding:18px}.project-story h3{font-size:16px}.project-story>p:last-child{font-size:13px}}
+@media(max-width:520px){.all-projects .project-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){#project-detail.detail-body{scroll-behavior:auto}}
 
 /* v21: 채움에만 30% alpha 적용, 텍스트와 테두리는 불투명 유지. */
@@ -93,3 +93,30 @@
 .project-previews{margin-top:52px}
 /* 데스크톱에서는 슬로건이 한 화면을 차지해 다음 섹션이 걸쳐 보이지 않는다. */
 @media(min-width:741px){.introduction{min-height:calc(100svh - 88px)}}
+
+/* 제목 바로 아래에 소개를 두고, 날짜 줄은 카드 하단에 정렬한다. */
+:is(.featured-projects,.all-projects) .card-meta{min-height:0}
+:is(.featured-projects,.all-projects) .card-meta h3{min-height:0;margin-bottom:8px}
+:is(.featured-projects,.all-projects) .card-meta p.card-summary{min-height:0;margin-bottom:16px}
+
+a[href],button:not(:disabled),summary,label[for],[role="button"],.project-card[data-project]{
+  cursor:pointer;
+}
+
+@media(min-width:741px){
+  #gnb{--menu-gap:clamp(18px,2vw,32px);gap:var(--menu-gap)}
+  #gnb a+a::before{
+    content:"";
+    position:absolute;
+    left:calc(var(--menu-gap) / -2);
+    top:50%;
+    height:12px;
+    border-left:1px solid #ddd;
+    transform:translateY(-50%);
+    pointer-events:none;
+  }
+}
+@media(max-width:740px){
+  #gnb a{padding-block:15px}
+  #gnb a+a{border-top:1px solid #e5e5e5}
+}
