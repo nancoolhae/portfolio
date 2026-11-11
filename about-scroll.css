@@ -12,7 +12,7 @@
 .about-roll-copy h3{font-size:22px;line-height:1.5;margin-bottom:12px;letter-spacing:-.03em}
 .about-roll-copy p{font-size:15px;line-height:1.85;color:#444}
 /* 화면은 고정하지만 스크롤 입력은 잠그지 않는다. */
-.about-scroll.about-scroll-active{height:1200svh;position:relative}
+.about-scroll.about-scroll-active{height:1090svh;position:relative}
 .about-scroll-active .about-roll-frame{position:sticky;top:88px;height:calc(100svh - 88px)}
 .about-scroll-active .about-roll-inner{height:100%;display:flex;flex-direction:column}
 .about-scroll-active .about-roll-stage{flex:1;min-height:0}
@@ -20,7 +20,7 @@
 .about-scroll-active .about-fruit{will-change:transform,opacity}
 .about-scroll-active .about-copy-stack{position:absolute;left:0;right:0;bottom:64px;display:grid}
 .about-scroll-active .about-roll-copy{grid-area:1/1;margin:0;opacity:0;will-change:opacity,transform;pointer-events:none}
-@media(max-width:740px){.about-roll-inner{padding:42px 22px 30px}.about-scroll-active .about-roll-frame{top:72px;height:calc(100svh - 72px)}.about-scroll-active .about-fruit-group{top:29%}.about-scroll-active .about-copy-stack{bottom:34px}.about-roll-copy h3{font-size:20px}.about-roll-copy p{font-size:14px;line-height:1.8}.about-scroll.about-scroll-active{height:1320svh}}
+@media(max-width:740px){.about-roll-inner{padding:42px 22px 30px}.about-scroll-active .about-roll-frame{top:72px;height:calc(100svh - 72px)}.about-scroll-active .about-fruit-group{top:29%}.about-scroll-active .about-copy-stack{bottom:34px}.about-roll-copy h3{font-size:20px}.about-roll-copy p{font-size:14px;line-height:1.8}.about-scroll.about-scroll-active{height:1200svh}}
 @media(max-height:650px) and (min-width:741px){.about-roll-inner{padding-top:24px;padding-bottom:16px}.about-scroll-active .about-fruit-group{top:29%}.about-roll-copy p{font-size:13px;line-height:1.6}.about-scroll-active .about-copy-stack{bottom:20px}}
 .about-fruit-group .about-fruit{background:transparent;border:0;border-radius:0;animation:none}
 /* 매 프레임의 진행률을 그대로 반영하여 기존 히어로용 전환 지연을 방지한다. */
