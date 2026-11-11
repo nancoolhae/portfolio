@@ -58,55 +58,64 @@ window.PORTFOLIO = {
           "src": "assets/previews/effort/01.webp",
           "alt": "프로젝트 배경: 소통과 거절의 어려움",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "서비스 도출 배경"
         },
         {
           "src": "assets/previews/effort/02.webp",
           "alt": "프로젝트 목표: 거절은 단단하게, 마음은 튼튼하게",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "서비스 목표"
         },
         {
           "src": "assets/previews/effort/03.webp",
           "alt": "차별화 전략: 실전 훈련과 마음 근력",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "환경분석 기반으로 도출한 NO력의 차별점"
         },
         {
           "src": "assets/previews/effort/benchmark-01.webp",
           "alt": "동기부여 UX Writing과 사용자 행동 유도 방식 벤치마킹",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "UX Writing 우수사례 벤치마킹"
         },
         {
           "src": "assets/previews/effort/benchmark-02.webp",
           "alt": "소통 기반 AI 상담 및 기존 거절 연습 서비스 벤치마킹",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "AI 기반 상담 및 기존 거절 서비스 사례 벤치마킹"
         },
         {
           "src": "assets/previews/effort/benchmark-03.webp",
           "alt": "말하기 트레이닝 서비스의 학습 흐름과 반복 유도 방식 벤치마킹",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "트레이닝 서비스의 학습 플로우 및 반복 유도 방식 사례 벤치마킹"
         },
         {
           "src": "assets/previews/effort/04.webp",
           "alt": "UX Writing 전략 1·2: 성장 마인드셋과 행동 모델",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "심리 및 행동 이론 기반의 UX Writing 도출"
         },
         {
           "src": "assets/previews/effort/05.webp",
           "alt": "UX Writing 전략 3·4: 작은 승리와 자기결정성",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "심리 및 행동 이론 기반의 UX Writing 도출"
         },
         {
           "src": "assets/previews/effort/06.webp",
           "alt": "서비스 상황별 UX Writing 적용 사례",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "NO력만의 UX Writing 가이드"
         }
       ],
       "file": null,
@@ -283,49 +292,57 @@ window.PORTFOLIO = {
           "src": "assets/previews/khidi/01.webp",
           "alt": "모바일 홈페이지의 정보 탐색 문제",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "제안서의 핵심 주장"
         },
         {
           "src": "assets/previews/khidi/02.webp",
           "alt": "홈페이지 개편의 세 가지 추진 전략",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "핵심 주장의 세부 추진 전략"
         },
         {
           "src": "assets/previews/khidi/03.webp",
           "alt": "PC와 모바일에서 직접 확인한 여섯 가지 문제",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "직접 관찰을 통한 대표 홈페이지 현황 및 문제점 파악"
         },
         {
           "src": "assets/previews/khidi/04.webp",
           "alt": "유사 기관 홈페이지 벤치마킹",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "유관 기관 벤치마킹 기반 개선 방향 도출"
         },
         {
           "src": "assets/previews/khidi/05.webp",
           "alt": "사용자 분석과 네 가지 이용 목적",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "사용자 분석 기반 개선 방향 도출"
         },
         {
           "src": "assets/previews/khidi/06.webp",
           "alt": "PC와 모바일의 접근 경로를 통일한 개선안",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "모바일 화면 개선 사항 및 개선안 와이어프레임"
         },
         {
           "src": "assets/previews/khidi/07.webp",
           "alt": "역할 분담, 150일 추진 일정과 예산",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "수행 조직, 일정 및 예산 계획"
         },
         {
           "src": "assets/previews/khidi/08.webp",
           "alt": "홈페이지 개편 핵심 제안과 기대효과",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "최종 제안 내용과 기대효과"
         }
       ],
       "file": null,
@@ -386,49 +403,57 @@ window.PORTFOLIO = {
           "src": "assets/previews/compass/01.webp",
           "alt": "COMPASS 프로젝트 개요와 서비스 화면",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "서비스 오버뷰"
         },
         {
           "src": "assets/previews/compass/02.webp",
           "alt": "COMPASS 비교가 행동으로 이어지지 않는 이유",
           "width": 1920,
-          "height": 1080
-        },
-        {
-          "src": "assets/previews/compass/03.webp",
-          "alt": "COMPASS 프로젝트 목표와 세 가지 방향",
-          "width": 1920,
-          "height": 1080
-        },
-        {
-          "src": "assets/previews/compass/04.webp",
-          "alt": "COMPASS 3C 분석과 서비스 기회",
-          "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "비교 경험에 관한 온라인 설문조사 및 인사이트 - 평소 비교 경험과 감정 분석"
         },
         {
           "src": "assets/previews/compass/05.webp",
           "alt": "COMPASS 타인과의 비교에 관한 설문조사",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "비교 경험에 관한 온라인 설문조사 및 인사이트 - 핵심 사용자 유형 도출"
         },
         {
           "src": "assets/previews/compass/06.webp",
           "alt": "COMPASS 세 가지 핵심 니즈와 필요 기능",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "비교 경험에 관한 온라인 설문조사 및 인사이트 - 핵심 니즈와 사용자 유형별 필요 기능"
+        },
+        {
+          "src": "assets/previews/compass/03.webp",
+          "alt": "COMPASS 프로젝트 목표와 세 가지 방향",
+          "width": 1920,
+          "height": 1080,
+          "caption": "설문조사 결과 기반 서비스 목표 도출"
+        },
+        {
+          "src": "assets/previews/compass/04.webp",
+          "alt": "COMPASS 3C 분석과 서비스 기회",
+          "width": 1920,
+          "height": 1080,
+          "caption": "환경분석 기반 COMPASS의 차별점 도출"
         },
         {
           "src": "assets/previews/compass/07.webp",
           "alt": "COMPASS 사용자 여정 지도",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "핵심 사용자 유형 중 '비교하며 느끼는 감정을 이해하지 못하는 사용자'의 사용자 여정 지도"
         },
         {
           "src": "assets/previews/compass/08.webp",
           "alt": "COMPASS MVP의 네 단계 핵심 사용자 경험",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "차별점 및 사용자 분석 기반 핵심 사용자 경험 도출"
         }
       ],
       "file": null,
@@ -492,49 +517,57 @@ window.PORTFOLIO = {
           "src": "assets/previews/hanatour/01.webp",
           "alt": "메뉴 분류와 서비스 탐색 문제",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "사용성 휴리스틱 기반 문제 제언"
         },
         {
           "src": "assets/previews/hanatour/02.webp",
           "alt": "1차 사용성 테스트 준비와 태스크",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "1차 사용성 테스트 준비"
         },
         {
           "src": "assets/previews/hanatour/03.webp",
           "alt": "사용성 테스트 성공률과 수행 시간 분석",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "1차 사용성 테스트 및 아이트래킹 데이터 분석"
         },
         {
           "src": "assets/previews/hanatour/04.webp",
           "alt": "국내 숙박 페이지 접근 시선 추적 결과",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "1차 사용성 테스트 및 아이트래킹 데이터 분석"
         },
         {
           "src": "assets/previews/hanatour/05.webp",
           "alt": "사용성 평가를 바탕으로 작성한 요구사항 정의서",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "1차 사용성 평가 데이터 기반 요구사항 도출"
         },
         {
           "src": "assets/previews/hanatour/06.webp",
           "alt": "여행 목적에 맞춘 홈과 카테고리의 가치 제안",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "경쟁대안 분석 기반 개선안 가치 제안"
         },
         {
           "src": "assets/previews/hanatour/07.webp",
           "alt": "정보구조 및 화면 재설계 기능 정의서",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "요구사항 및 가치 제안 기반 기능 정의 도출"
         },
         {
           "src": "assets/previews/hanatour/08.webp",
           "alt": "개선된 홈 화면과 국내외 항공 진입 경로",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "개선안 디지털 프로토타이핑"
         }
       ],
       "file": null,
@@ -599,49 +632,57 @@ window.PORTFOLIO = {
           "src": "assets/previews/kindergarden/01.webp",
           "alt": "남양주시 지역 문제와 지역 선정 근거",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "지역 리서치 기반 남양주시의 페인포인트 도출"
         },
         {
           "src": "assets/previews/kindergarden/02.webp",
           "alt": "서비스 아이디어를 구체화한 브레인라이팅",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "서비스 아이디어 도출을 위한 브레인라이팅 진행"
         },
         {
           "src": "assets/previews/kindergarden/03.webp",
           "alt": "돌봄 수요와 시니어 인력, 마을정원을 연결한 서비스 구조",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "심층 지역 리서치 기반 킨더가든의 지역 특화성 및 타당성 도출"
         },
         {
           "src": "assets/previews/kindergarden/04.webp",
           "alt": "부모와 시니어를 위한 프로젝트 목표와 밸류 매트릭스",
           "width": 1920,
-          "height": 1080
-        },
-        {
-          "src": "assets/previews/kindergarden/05.webp",
-          "alt": "서비스 아이디어를 분류하는 카드소팅",
-          "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "밸류 매트릭스 기반 서비스 가치 제안"
         },
         {
           "src": "assets/previews/kindergarden/06.webp",
           "alt": "부모, 어린이, 시니어의 사용자 여정 지도",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "사용자 유형별 사용자 여정 지도 기반 구체적 니즈 및 기능 아이디어 도출"
         },
         {
           "src": "assets/previews/kindergarden/07.webp",
           "alt": "남양주시 별내동에서 진행한 시니어 심층 인터뷰",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "심층 인터뷰 기반 사용자 니즈 파악"
         },
         {
           "src": "assets/previews/kindergarden/08.webp",
           "alt": "남양주시 다산동 어린이집 주변과 놀이터 현장 관찰",
           "width": 1920,
-          "height": 1080
+          "height": 1080,
+          "caption": "타운와칭 기반 사용자 니즈 파악"
+        },
+        {
+          "src": "assets/previews/kindergarden/05.webp",
+          "alt": "서비스 아이디어를 분류하는 카드소팅",
+          "width": 1920,
+          "height": 1080,
+          "caption": "카드소팅 기반 도출 기능 우선순위 결정"
         }
       ],
       "file": null,
