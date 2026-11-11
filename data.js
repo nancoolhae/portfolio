@@ -123,7 +123,7 @@ window.PORTFOLIO = {
       "downloads": [
         {
           "label": "전체 문서 내려받기",
-          "file": null
+          "file": "files/NO력_기획서.pdf"
         },
         {
           "label": "화면설계서 내려받기",
