@@ -35,3 +35,8 @@
 @media(max-width:740px){
   .about-roll-copy{grid-template-columns:1fr;gap:12px}
 }
+
+/* GNB 아래에서 효능 장면의 전체 스크롤 진행률을 표시한다. */
+.about-scroll-progress{position:absolute;left:0;right:0;top:100%;height:4px;background:rgb(255 136 0 / 12%);pointer-events:none}
+.about-scroll-progress[hidden]{display:none}
+.about-scroll-progress>span{display:block;width:100%;height:100%;background:#FF8800;transform:scaleX(0);transform-origin:left center}
