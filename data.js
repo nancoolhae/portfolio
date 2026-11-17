@@ -16,6 +16,10 @@ window.PORTFOLIO = {
     "letter": "files/김아현_자기소개서.pdf"
   },
   "projectDownloads": {
+    "hanatour": {
+      "전체 문서 내려받기": "files/김아현_하나투어 앱 UXUI 개선 보고서.pdf",
+      "화면설계서 내려받기": "files/김아현_하나투어 앱 UXUI 개선 화면설계서.pdf"
+    },
     "effort": {
       "전체 문서 내려받기": "files/김아현_사회초년생 거절 연습 어플리케이션 “NO력” 기획서.pdf"
     },
