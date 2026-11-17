@@ -9,6 +9,16 @@
   const filePath = value => typeof value === 'string' && /^(?:files|assets)\/[\w가-힣./ -]+$/.test(value) && !value.includes('..') ? value : null;
   const download = (file, label) => filePath(file) ? `<a class="text-link" href="${esc(file)}" download>${esc(label)} ↓</a>` : `<span class="unavailable">${esc(label)} · 등록 예정</span>`;
   /* 2. 이력 칩: 원문에 없는 연도/학력/경력은 명시적 준비 상태를 보인다. */
+  const profileRows = [
+    ['성명', data.profile.name],
+    ['생년월일', data.profile.birthDate],
+    ['주소', data.contact.address],
+    ['휴대전화', data.contact.phone],
+    ['E-mail', data.contact.email],
+  ];
+  $('#career-profile-details').innerHTML = profileRows.map(([label, value]) =>
+    `<div><dt>${label}</dt><dd>${esc(value)}</dd></div>`
+  ).join('');
   let careerKind = '학력';
   function renderCareer() {
     $('#career-filters').innerHTML = Object.keys(data.career).map(kind => `<button type="button" data-career="${kind}" aria-pressed="${kind === careerKind}">${kind}</button>`).join('');
@@ -52,9 +62,9 @@
   ];
   const contactLinks = $('#contact-links');
   contactLinks.innerHTML = contacts.map(({ label, value, icon }, index) => `
-    <button type="button" class="contact-card" data-contact-index="${index}" aria-label="${label} 복사: ${esc(value)}">
-      <span class="contact-card-label"><span class="contact-card-icon" aria-hidden="true">${icon}</span>${label}</span>
-      <span class="contact-card-value">${esc(value)} <span aria-hidden="true">⧉</span></span>
+    <button type="button" class="contact-card" data-contact-index="${index}">
+      <span class="contact-card-label"><span class="contact-card-icon" aria-hidden="true">${icon}</span><span class="contact-card-caption">${label} <small>눌러서 복사하기</small></span></span>
+      <span class="contact-card-value">${esc(value)}</span>
     </button>
   `).join('');
 

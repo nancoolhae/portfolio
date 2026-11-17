@@ -1,6 +1,10 @@
 /* 귤_스토리보드.pdf v0.8 기준. 파일과 previews는 실제 원본을 등록할 때 채웁니다.
  * 기간은 계획 종료일을 포함한 원자료 표기 그대로이며, 누락된 이력 연도는 —로 표시합니다. */
 window.PORTFOLIO = {
+  "profile": {
+    "name": "김아현 金娥賢 / Ahyeon Kim",
+    "birthDate": "2006.01.13"
+  },
   "contact": {
     "email": "kwzzah@gmail.com",
     "phone": "010-9451-5891",
