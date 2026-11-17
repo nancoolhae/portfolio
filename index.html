@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#FAF8F3"><title>잘 익은 귤 김아현</title>
   <link rel="icon" href="assets/brand-tangerine.webp" type="image/webp"><link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=citrus-palette"><link rel="stylesheet" href="design-v2.css?v=citrus-palette"><link rel="stylesheet" href="storyboard.css?v=citrus-palette"><link rel="stylesheet" href="motion.css?v=citrus-palette">
-  <script defer src="data.js?v=compact-career"></script><script defer src="projects.js?v=award-badge"></script><script defer src="app.js?v=compact-career"></script>
-<script defer src="motion.js?v=contact-cards"></script><link rel="stylesheet" href="palette.css?v=compact-career"></head>
+  <script defer src="data.js?v=compact-career"></script><script defer src="projects.js?v=award-badge"></script><script defer src="app.js?v=career-chips"></script>
+<script defer src="motion.js?v=contact-cards"></script><link rel="stylesheet" href="palette.css?v=career-chips"></head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
   <!-- GNB: 사용자가 지정한 간결한 일반 명칭, 기존 위치와 앵커는 유지. -->
@@ -34,7 +34,10 @@
         <h3 id="career-profile-title"></h3>
         <dl id="career-profile-details"></dl>
       </section>
-      <div id="career-list" class="career-layout"></div>
+      <div class="career-records">
+        <div id="career-filters" class="filters" role="group" aria-label="이력 분류"></div>
+        <ul id="career-list" class="career-entries" aria-label="학력"></ul>
+      </div>
     </section>
     <!-- A4-8: 왼쪽 당도 안내, 오른쪽 도구별 막대. 값은 사용자 화면설계서 기준. -->
     <section id="skills" class="section sweetness" aria-labelledby="skills-title"><h2 id="skills-title">당도</h2><p class="eyebrow">손에 익은 만큼 달콤한, 툴 활용 능력을 소개합니다.</p><div class="sweetness-tools" id="tools"></div><p class="sweetness-legend">보통~새콤달콤: 10~11 브릭스 / 고당도: 12~12.5 브릭스 / 초고당도: 13~15 브릭스</p></section>

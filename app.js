@@ -23,20 +23,31 @@
     `).join('')}
   `;
 
-  $('#career-list').innerHTML = Object.entries(data.career).map(([kind, rows]) => `
-    <section class="career-records">
-      <h3>${esc(kind)}</h3>
-      <ul class="career-entries">
-        ${rows.map(row => `
-          <li class="career-row">
-            <h4>${esc(row.title)}</h4>
-            <span class="career-date">${esc(row.year)}</span>
-            ${row.text ? `<p${row.resultDescription ? ' class="career-result"' : ''}>${esc(row.text)}</p>` : ''}
-          </li>
-        `).join('')}
-      </ul>
-    </section>
-  `).join('');
+  const careerFilters = $('#career-filters');
+  const careerList = $('#career-list');
+  careerFilters.innerHTML = Object.keys(data.career).map(kind =>
+    `<button type="button" data-career="${esc(kind)}" aria-controls="career-list" aria-pressed="false">${esc(kind)}</button>`
+  ).join('');
+
+  function selectCareer(kind) {
+    for (const button of careerFilters.children) {
+      button.setAttribute('aria-pressed', String(button.dataset.career === kind));
+    }
+    careerList.setAttribute('aria-label', kind);
+    careerList.innerHTML = data.career[kind].map(row => `
+      <li class="career-row">
+        <h3>${esc(row.title)}</h3>
+        <span class="career-date">${esc(row.year)}</span>
+        ${row.text ? `<p${row.resultDescription ? ' class="career-result"' : ''}>${esc(row.text)}</p>` : ''}
+      </li>
+    `).join('');
+  }
+
+  careerFilters.addEventListener('click', event => {
+    const button = event.target.closest('button[data-career]');
+    if (button && button.getAttribute('aria-pressed') !== 'true') selectCareer(button.dataset.career);
+  });
+  selectCareer(Object.keys(data.career)[0]);
   // 사용자가 제공한 A4-8의 15 Brix 척도를 사용한다. 실제 과일 측정값이 아닌 역량 메타포.
   $('#tools').innerHTML = data.tools.map(tool => `<div class="sweetness-tool" data-brix="${tool.brix}"><span class="tool-symbol" aria-hidden="true"><img src="${esc(tool.icon)}" alt="" width="36" height="36"></span><div><div class="sweetness-tool-heading"><h3>${esc(tool.name)}</h3></div><p>${esc(tool.description)}</p><div class="tool-meter-row"><span class="gauge-shell"><meter class="native-meter" min="0" max="15" value="${tool.brix}" aria-label="${esc(tool.name)} 역량 당도, 15 Brix 중 ${tool.brix} Brix">${tool.brix} / 15 Brix</meter><span class="gauge-track" aria-hidden="true"><span class="gauge-fill" style="--level:${tool.brix/15}"></span></span></span><span>${tool.brix} Brix</span></div></div></div>`).join('');
   // 소개 화면은 다운로드 대신 문서 보기. 원본 미등록 시 버튼 선택 후 상태를 안내한다.
