@@ -47,13 +47,33 @@
 
   const { phone, email } = data.contact;
   const contacts = [
-    { label: '전화', value: phone, icon: '☎', href: `tel:${phone.replace(/[^+0-9]/g, '')}` },
-    { label: '이메일', value: email, icon: '✉', href: `mailto:${encodeURIComponent(email).replace('%40', '@')}` },
+    { label: '전화', value: phone, icon: '☎', confirmation: '전화번호를 복사했어요.' },
+    { label: '이메일', value: email, icon: '✉', confirmation: '이메일을 복사했어요.' },
   ];
-  $('#contact-links').innerHTML = contacts.map(({ label, value, icon, href }) => `
-    <a class="contact-card" href="${esc(href)}">
+  const contactLinks = $('#contact-links');
+  contactLinks.innerHTML = contacts.map(({ label, value, icon }, index) => `
+    <button type="button" class="contact-card" data-contact-index="${index}" aria-label="${label} 복사: ${esc(value)}">
       <span class="contact-card-label"><span class="contact-card-icon" aria-hidden="true">${icon}</span>${label}</span>
-      <span class="contact-card-value">${esc(value)} <span aria-hidden="true">↗</span></span>
-    </a>
+      <span class="contact-card-value">${esc(value)} <span aria-hidden="true">⧉</span></span>
+    </button>
   `).join('');
+
+  const contactToast = $('#contact-toast');
+  let toastTimer;
+  contactLinks.addEventListener('click', async event => {
+    const button = event.target.closest('[data-contact-index]');
+    if (!button) return;
+
+    const { value, confirmation } = contacts[button.dataset.contactIndex];
+    let message = confirmation;
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch {
+      message = '복사하지 못했어요. 연락처를 직접 복사해주세요.';
+    }
+
+    clearTimeout(toastTimer);
+    contactToast.textContent = message;
+    toastTimer = setTimeout(() => { contactToast.textContent = ''; }, 2600);
+  });
 })();

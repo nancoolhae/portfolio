@@ -198,3 +198,80 @@ nav a::after,
     justify-content: flex-start;
   }
 }
+
+:is(.featured-projects, .career-sidebar, .sweetness, .about, .contact) h2 + .eyebrow {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.career-sidebar h2 {
+  margin-bottom: 0;
+}
+
+.career-sidebar .filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.career-sidebar .filters button {
+  min-height: 40px;
+  padding-inline: 5px;
+}
+
+.project-facts {
+  align-items: stretch;
+}
+
+.project-facts > div:not(:nth-child(3n)) {
+  border-bottom: 1px solid #dedede;
+}
+
+@media (max-width: 560px) {
+  .project-facts > div:not(:last-child) {
+    border-bottom: 1px solid #dedede;
+  }
+}
+
+.contact-card {
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  user-select: text;
+}
+
+.contact-toast {
+  position: fixed;
+  z-index: 30;
+  inset-inline-start: 50%;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--surface);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.contact-toast:empty {
+  padding: 0;
+}
+
+.portfolio-footer {
+  padding-block: 22px 16px;
+}
+
+.footer-main {
+  padding-bottom: 12px;
+}
+
+.footer-main img {
+  width: clamp(62px, 8vw, 105px);
+}
