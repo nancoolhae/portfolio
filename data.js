@@ -734,7 +734,7 @@ window.PORTFOLIO = {
       "contributions": [
         {
           "title": "지역 리서치 기반 문제 정의",
-          "body": "남양주 지역 리서치를 통해 주간 인구 공동화와 초고령 사회 진입 문제를 확인했습니다. 낮 시간에 남겨진 시니어와 어린이를 위해 새로운 시설을 만드는 대신 '마을정원'이라는 기존 인프라에 주목했습니다. 이를 바탕으로 팀원들과 브레인라이팅을 진행해, 가드닝 활동과 부모를 위한 안심 리포트를 결합한 서비스 아이디어를 도출했습니다."
+          "body": "남양주 지역 리서치로 주간 인구 공동화와 초고령 사회 진입 문제를 확인했습니다. 낮 시간에 남겨진 시니어와 어린이를 위해 새 시설 대신 '마을정원'이라는 기존 인프라에 주목했습니다. 이를 바탕으로 팀원들과 브레인라이팅을 진행해, 가드닝 활동과 부모를 위한 안심 리포트를 결합한 아이디어를 도출했습니다."
         },
         {
           "title": "현장 리서치 및 인사이트 도출",
@@ -922,7 +922,64 @@ window.PORTFOLIO = {
       "popup": "pop_up-09",
       "title": "사용성 평가 기반 투썸하트 앱 ‘영수증 적립’ 기능 진입 경로 개선 화면설계서",
       "featured": false,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/twosome-screen/01.png",
+          "alt": "정보구조도",
+          "width": 1600,
+          "height": 900,
+          "caption": "정보구조도"
+        },
+        {
+          "src": "assets/previews/twosome-screen/02.png",
+          "alt": "기준 해상도",
+          "width": 1600,
+          "height": 900,
+          "caption": "기준 해상도"
+        },
+        {
+          "src": "assets/previews/twosome-screen/03.png",
+          "alt": "모달",
+          "width": 1600,
+          "height": 900,
+          "caption": "모달"
+        },
+        {
+          "src": "assets/previews/twosome-screen/04.png",
+          "alt": "트랜지션",
+          "width": 1600,
+          "height": 900,
+          "caption": "트랜지션"
+        },
+        {
+          "src": "assets/previews/twosome-screen/05.png",
+          "alt": "공통 UI 요소",
+          "width": 1600,
+          "height": 900,
+          "caption": "공통 UI 요소"
+        },
+        {
+          "src": "assets/previews/twosome-screen/06.png",
+          "alt": "서비스 흐름도",
+          "width": 1600,
+          "height": 900,
+          "caption": "서비스 흐름도"
+        },
+        {
+          "src": "assets/previews/twosome-screen/07.png",
+          "alt": "화면 정의",
+          "width": 1600,
+          "height": 900,
+          "caption": "화면 정의"
+        },
+        {
+          "src": "assets/previews/twosome-screen/08.png",
+          "alt": "Use Case Scenario",
+          "width": 1600,
+          "height": 900,
+          "caption": "Use Case Scenario"
+        }
+      ],
       "file": null,
       "skills": "플로우차트 · 사용시나리오 · 화면설계서",
       "downloads": [

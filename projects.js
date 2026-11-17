@@ -33,15 +33,13 @@
       ...item,
       file: sharedFiles?.[item.label] ?? item.file
     }));
-    // 상단에는 두 문서 유형을 표시하고, 하단은 프로젝트별 기존 목록을 사용한다.
-    const topDownloads = ['전체 문서 내려받기', '화면설계서 내려받기'].map(label =>
-      downloads.find(item => item.label === label) ?? {label, file: null}
-    );
     const topDownloadMarkup = `<div class="project-downloads-top">
-      <div class="project-downloads" role="group" aria-label="프로젝트 소개 아래 문서 내려받기">${topDownloads.map(downloadButton).join('')}</div>
+      <div class="project-downloads" role="group" aria-label="프로젝트 소개 아래 문서 내려받기">${downloads.map(downloadButton).join('')}</div>
       <p class="download-status" role="status"></p>
     </div>`;
-    const contributions = p.contributions ?? data.contributionPlaceholder;
+    const contributions = p.contributions
+      ?? data.projects.find(project => project.base === p.base && project.contributions)?.contributions
+      ?? data.contributionPlaceholder;
     const contributionMarkup = `<section class="project-contributions" aria-labelledby="project-contributions-title">
       <h3 id="project-contributions-title">프로젝트 기여</h3>
       <ol class="project-contribution-list">
