@@ -318,6 +318,7 @@ nav a::after,
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: #b7a59c;
+  text-decoration-thickness: 0.75px;
   cursor: pointer;
 }
 
@@ -361,7 +362,7 @@ nav a::after,
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: baseline;
   gap: 3px 8px;
-  padding-block: 10px;
+  padding-block: 13px;
 }
 
 .career .career-row:last-child {
