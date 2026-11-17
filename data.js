@@ -359,6 +359,7 @@ window.PORTFOLIO = {
     },
     {
       "name": "COMPASS",
+      "award": "2026 캡스톤디자인 PT 우수작",
       "prefix": "비교를 성장의 기회로 바꾸는 어플리케이션 “COMPASS”",
       "period": "2026.09.03~2026.11.20",
       "team": "6명",

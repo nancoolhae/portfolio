@@ -45,18 +45,15 @@
     document.querySelectorAll('main>section').forEach(el=>active.observe(el));
   }
 
-  /* 6. mailto: 실제 전송은 사용자가 메일 앱에서 수행. 수신자 미등록이면 발송 불가.
-   * 이름/회신 주소/메시지는 URL encoding하며 전송 완료라고 표시하지 않는다. */
-  const email = typeof data.contact.email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.contact.email) ? data.contact.email : null;
-  $('#contact-info').innerHTML = [['EMAIL',email,'✉'],['PHONE',data.contact.phone,'☎'],['LOCATION',data.contact.address,'<img src="assets/location-pin.svg" alt="" width="20" height="20">']].map(([label,value,icon])=>`<div><span class="contact-icon" aria-hidden="true">${icon}</span><div><dt>${label}</dt><dd>${value ? esc(value) : '정보 등록 예정'}</dd></div></div>`).join('');
-  if (!email) $('#form-status').textContent = '수신 이메일 등록 예정입니다. 현재는 메일 초안을 열 수 없습니다.';
-  $('#contact-form').addEventListener('submit',event=>{
-    event.preventDefault();
-    if (!email) {$('#form-status').textContent = '수신 이메일이 아직 등록되지 않았습니다. 연락처 등록 후 이용해주세요.';return;}
-    const values = new FormData(event.currentTarget);
-    const subject = `[포트폴리오 문의] ${values.get('sender')}`;
-    const body = `보내시는 분: ${values.get('sender')}\n회신 이메일: ${values.get('reply')}\n\n${values.get('message')}`;
-    location.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    $('#form-status').textContent = '메일 앱에 초안을 요청했습니다. 내용을 확인하고 메일 앱에서 전송해주세요.';
-  });
+  const { phone, email } = data.contact;
+  const contacts = [
+    { label: '전화', value: phone, icon: '☎', href: `tel:${phone.replace(/[^+0-9]/g, '')}` },
+    { label: '이메일', value: email, icon: '✉', href: `mailto:${encodeURIComponent(email).replace('%40', '@')}` },
+  ];
+  $('#contact-links').innerHTML = contacts.map(({ label, value, icon, href }) => `
+    <a class="contact-card" href="${esc(href)}">
+      <span class="contact-card-label"><span class="contact-card-icon" aria-hidden="true">${icon}</span>${label}</span>
+      <span class="contact-card-value">${esc(value)} <span aria-hidden="true">↗</span></span>
+    </a>
+  `).join('');
 })();

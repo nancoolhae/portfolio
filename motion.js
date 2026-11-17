@@ -7,8 +7,8 @@
     '.section-head',
     '.career-sidebar','.career-records','.sweetness>.eyebrow','.sweetness>h2',
     '.sweetness-tool','.sweetness-legend',
-    '.contact-heading','#contact-form',
-    '.contact-info>div','.footer-main','.footer-bottom','.all-projects>.text-link',
+    '.contact-heading','.contact-card',
+    '.footer-main','.footer-bottom','.all-projects>.text-link',
     '.all-projects>.filters','.project-card'
   ].join(',');
   let observer=null;
