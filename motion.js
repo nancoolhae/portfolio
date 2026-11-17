@@ -6,8 +6,8 @@
   const targets=[
     '.section-head',
     '.career-sidebar','.career-records','.sweetness>.eyebrow','.sweetness>h2',
-    '.sweetness-tool','.sweetness-legend','.about-inner>.eyebrow','.about-inner>h2',
-    '.about-strength','.about-stories article','.contact-heading','#contact-form',
+    '.sweetness-tool','.sweetness-legend',
+    '.contact-heading','#contact-form',
     '.contact-info>div','.footer-main','.footer-bottom','.all-projects>.text-link',
     '.all-projects>.filters','.project-card'
   ].join(',');
@@ -22,7 +22,7 @@
       // 동작을 줄이는 환경/미지원 브라우저는 숨기지 않고 최종 값 표시.
       if(!observer||reduced.matches){reveal(element);return;}
       element.dataset.scrollReveal='waiting';
-      if(element.matches('.project-card,.sweetness-tool,.about-stories article')){
+      if(element.matches('.project-card,.sweetness-tool')){
         const siblings=[...element.parentElement.children];
         element.style.setProperty('--reveal-delay',`${(siblings.indexOf(element)%3)*75}ms`);
       }

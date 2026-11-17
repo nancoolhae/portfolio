@@ -13,6 +13,7 @@ window.PORTFOLIO = {
   "projects": [
     {
       "name": "NO력",
+      "award": "CDAK 특선",
       "prefix": "사회초년생 거절 연습 어플리케이션 “NO력”",
       "period": "2026.03.10~2026.06.05",
       "team": "3명",
@@ -1188,7 +1189,7 @@ window.PORTFOLIO = {
     },
     {
       "name": "Chat GPT",
-      "description": "코딩",
+      "description": "바이브 코딩, AI 레드팀",
       "brix": 12,
       "icon": "assets/tool-chatgpt.svg"
     }
