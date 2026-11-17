@@ -445,6 +445,19 @@ nav a::after,
   }
 }
 
+.project-overview {
+  margin-bottom: 34px;
+}
+
+.project-overview > h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.project-overview .project-facts {
+  margin-bottom: 0;
+}
+
 .project-contributions {
   margin-bottom: 28px;
 }
