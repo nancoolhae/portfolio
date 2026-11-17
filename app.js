@@ -13,12 +13,12 @@
     { label: '전화', profileLabel: '휴대전화', value: phone, icon: '☎', confirmation: '전화번호를 복사했어요.' },
     { label: '이메일', profileLabel: '이메일', value: email, icon: '✉', confirmation: '이메일을 복사했어요.' },
   ];
-  $('#career-profile-title').textContent = data.profile.name;
+  $('#career-profile-title').innerHTML = `${esc(data.profile.name)} <span lang="en">${esc(data.profile.englishName)}</span>`;
   $('#career-profile-details').innerHTML = `
-    <div><dt>생년월일</dt><dd>${esc(data.profile.birthDate)}</dd></div>
-    <div><dt>주소</dt><dd>${esc(data.contact.address)}</dd></div>
+    <div><dt class="sr-only">생년월일</dt><dd>${esc(data.profile.birthDate)}</dd></div>
+    <div><dt class="sr-only">주소</dt><dd>${esc(data.contact.address)}</dd></div>
     ${contacts.map(({ label, profileLabel, value }, index) => `
-      <div><dt>${profileLabel}</dt><dd><button type="button" class="career-copy"
+      <div><dt class="sr-only">${profileLabel}</dt><dd><button type="button" class="career-copy"
         data-contact-index="${index}" aria-label="${label} 복사: ${esc(value)}">${esc(value)}</button></dd></div>
     `).join('')}
   `;

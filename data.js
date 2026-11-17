@@ -2,7 +2,8 @@
  * 기간은 계획 종료일을 포함한 원자료 표기 그대로이며, 누락된 이력 연도는 —로 표시합니다. */
 window.PORTFOLIO = {
   "profile": {
-    "name": "김아현 / Ahyeon Kim",
+    "name": "김아현",
+    "englishName": "Ahyeon Kim",
     "birthDate": "2006.01.13"
   },
   "contact": {
