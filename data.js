@@ -93,6 +93,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "effort",
+      "detailAward": "CDAK 특선",
       "contributions": [
         {
           "title": "문제 정의 및 타겟 선정",
@@ -482,6 +483,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "compass",
+      "detailAward": "2026 캡스톤디자인 PT 우수작",
       "contributions": [
         {
           "title": "문제 정의 및 서비스 아이디어 도출",

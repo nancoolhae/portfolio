@@ -57,7 +57,15 @@
     const id=location.hash.startsWith('#project/')?location.hash.slice(9):null,p=data.projects.find(p=>p.id===id);
     if(p){
       if(!dialog.open){previousFocus=document.activeElement;savedY=scrollY;if(event?.oldURL){const oldHash=new URL(event.oldURL).hash;if(!oldHash.startsWith('#project/'))returnHash=oldHash;}}
-      $('#detail-title').textContent=p.title;$('#detail-summary').textContent=p.summary;body.innerHTML=detailMarkup(p);
+      const detailTitle = $('#detail-title');
+      detailTitle.textContent = p.title;
+      if (p.detailAward) {
+        const badge = document.createElement('span');
+        badge.className = 'detail-award';
+        badge.textContent = p.detailAward;
+        detailTitle.append(' ', badge);
+      }
+      $('#detail-summary').textContent=p.summary;body.innerHTML=detailMarkup(p);
       if(!dialog.open)dialog.showModal();document.body.classList.add('modal-open');body.scrollTop=0;$('#detail-title').focus({preventScroll:true});document.title=`${p.title} · 잘 익은 귤 김아현`;
     }else{
       if(dialog.open){dialog.close();document.body.classList.remove('modal-open');document.title=initialTitle;scrollTo({top:savedY,behavior:'instant'});if(previousFocus?.isConnected&&previousFocus!==document.body)previousFocus.focus({preventScroll:true});}

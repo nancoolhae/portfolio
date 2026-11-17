@@ -513,3 +513,18 @@ body,
     border-top: 1px solid var(--line);
   }
 }
+
+.detail-award {
+  display: inline-block;
+  margin-inline-start: 6px;
+  padding: 3px 8px;
+  border: 1px solid #dba39b;
+  border-radius: 6px;
+  background: #f7ddd9;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: normal;
+  vertical-align: middle;
+  white-space: nowrap;
+}
