@@ -1109,7 +1109,64 @@ window.PORTFOLIO = {
       "popup": "pop_up-11",
       "title": "남양주 마을정원 기반 돌봄 서비스 “킨더가든” 화면설계서",
       "featured": false,
-      "previews": [],
+      "previews": [
+        {
+          "src": "assets/previews/kindergarden-screen/01.png",
+          "alt": "정보구조도 (부모 사용자 화면)",
+          "width": 3840,
+          "height": 2160,
+          "caption": "정보구조도 (부모 사용자 화면)"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/02.png",
+          "alt": "공통 UI 요소",
+          "width": 3840,
+          "height": 2160,
+          "caption": "공통 UI 요소"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/03.png",
+          "alt": "기준 해상도",
+          "width": 3840,
+          "height": 2160,
+          "caption": "기준 해상도"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/04.png",
+          "alt": "서비스 흐름도",
+          "width": 3840,
+          "height": 2160,
+          "caption": "서비스 흐름도"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/05.png",
+          "alt": "와이어프레임",
+          "width": 3840,
+          "height": 2160,
+          "caption": "와이어프레임"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/06.png",
+          "alt": "화면 정의",
+          "width": 3840,
+          "height": 2160,
+          "caption": "화면 정의"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/07.png",
+          "alt": "화면 정의",
+          "width": 3840,
+          "height": 2160,
+          "caption": "화면 정의"
+        },
+        {
+          "src": "assets/previews/kindergarden-screen/08.png",
+          "alt": "화면 정의",
+          "width": 3840,
+          "height": 2160,
+          "caption": "화면 정의"
+        }
+      ],
       "file": null,
       "downloads": [
         {
