@@ -15,6 +15,22 @@ window.PORTFOLIO = {
     "resume": "files/김아현_이력서.pdf",
     "letter": "files/김아현_자기소개서.pdf"
   },
+  "projectDownloads": {
+    "effort": {
+      "전체 문서 내려받기": "files/김아현_사회초년생 거절 연습 어플리케이션 “NO력” 기획서.pdf"
+    },
+    "twosome": {
+      "전체 문서 내려받기": "files/김아현_사용성 평가 기반 투썸하트 앱 ‘영수증 적립’ 기능 진입 경로 개선 보고서.pdf",
+      "화면설계서 내려받기": "files/김아현_사용성 평가 기반 투썸하트 앱 ‘영수증 적립’ 기능 진입 경로 개선 화면설계서.pdf"
+    },
+    "compass": {
+      "전체 문서 내려받기": "files/김아현_비교를 성장의 기회로 바꾸는 어플리케이션 “COMPASS” 기획서.pdf"
+    },
+    "kindergarden": {
+      "전체 문서 내려받기": "files/김아현_남양주 마을정원 기반 돌봄 서비스 “킨더가든” 기획서.pdf",
+      "화면설계서 내려받기": "files/김아현_남양주 마을정원 기반 돌봄 서비스 “킨더가든” 화면설계서.pdf"
+    }
+  },
   "projects": [
     {
       "name": "NO력",
@@ -24,6 +40,7 @@ window.PORTFOLIO = {
       "role": "서비스 기획, 자료 리서치 및 시장 분석, 정보 구조 및 화면설계서 작성",
       "contribution": "40%",
       "tags": [
+        "신규 서비스 기획",
         "UX Writing",
         "벤치마킹"
       ],
@@ -128,7 +145,7 @@ window.PORTFOLIO = {
       "downloads": [
         {
           "label": "전체 문서 내려받기",
-          "file": "files/NO력_기획서.pdf"
+          "file": null
         },
         {
           "label": "화면설계서 내려받기",
@@ -370,6 +387,7 @@ window.PORTFOLIO = {
       "role": "서비스 기획, 시장 분석, 사용자 분석, 레이블링, 정보 구조 및 화면설계서 작성",
       "contribution": "25%",
       "tags": [
+        "신규 서비스 기획",
         "설문조사",
         "유저 페르소나"
       ],

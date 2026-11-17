@@ -137,7 +137,8 @@ nav a::after,
   bottom: 12px;
   padding: 5px 10px;
   border-radius: 6px;
-  background: var(--surface);
+  background: color-mix(in srgb, var(--orange) 35%, white);
+  border: 1px solid rgb(254 133 5 / 40%);
   color: var(--ink);
   font-size: 12px;
   font-weight: 650;
@@ -434,5 +435,12 @@ nav a::after,
 
   .career-profile dl > div:nth-child(odd)::before {
     display: none;
+  }
+}
+
+@media (hover: hover) {
+  #career-filters button[aria-pressed]:hover {
+    background: var(--orange-tint);
+    border-color: var(--off-red);
   }
 }
