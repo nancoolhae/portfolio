@@ -41,7 +41,10 @@ body,
   object-fit: contain;
 }
 
-nav a::after,
+#gnb a::after {
+  background: var(--orange);
+}
+
 .brand-dot {
   background: var(--off-red);
 }
@@ -439,7 +442,8 @@ nav a::after,
 }
 
 @media (hover: hover) {
-  #career-filters button[aria-pressed]:hover {
+  #career-filters button[aria-pressed]:hover,
+  #project-filters button[aria-pressed]:hover {
     background: var(--orange-tint);
     border-color: var(--off-red);
   }
