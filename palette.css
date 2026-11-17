@@ -131,10 +131,22 @@ nav a::after,
   background: var(--surface);
 }
 
-.tag-row .award {
-  background: #f7ddd9;
-  border-color: #dba39b;
-  font-weight: 700;
+.project-status {
+  position: absolute;
+  inset-inline-start: 12px;
+  bottom: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.sweetness-tool p {
+  min-height: 0;
+  margin-bottom: 7px;
 }
 
 .contact-links {

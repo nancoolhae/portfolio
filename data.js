@@ -18,7 +18,6 @@ window.PORTFOLIO = {
   "projects": [
     {
       "name": "NO력",
-      "award": "CDAK 특선",
       "prefix": "사회초년생 거절 연습 어플리케이션 “NO력”",
       "period": "2026.03.10~2026.06.05",
       "team": "3명",
@@ -288,6 +287,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "khidi",
+      "inProgress": true,
       "base": "khidi",
       "type": "제안서",
       "popup": "pop_up-03",
@@ -364,7 +364,6 @@ window.PORTFOLIO = {
     },
     {
       "name": "COMPASS",
-      "award": "2026 캡스톤디자인 PT 우수작",
       "prefix": "비교를 성장의 기회로 바꾸는 어플리케이션 “COMPASS”",
       "period": "2026.09.03~2026.11.20",
       "team": "6명",
@@ -514,6 +513,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "hanatour",
+      "inProgress": true,
       "base": "hanatour",
       "type": "보고서",
       "popup": "pop_up-05",
@@ -860,6 +860,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "compass-screen",
+      "inProgress": true,
       "base": "compass",
       "type": "화면설계서",
       "popup": "pop_up-10",
@@ -976,6 +977,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "hanatour-screen",
+      "inProgress": true,
       "base": "hanatour",
       "type": "화면설계서",
       "popup": "pop_up-12",
