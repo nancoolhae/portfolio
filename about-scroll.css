@@ -1,7 +1,7 @@
 /* 자연 스크롤 거리로 다섯 장면을 연결한다. JS가 없거나 모션 감소 설정이면 모든 글을 순서대로 읽는다. */
 .about.about-scroll{padding:0;max-width:none;background:rgb(255 136 0 / 20%)}
 .about-roll-inner{max-width:1440px;margin:auto;padding:64px var(--pad) 40px}
-.about-roll-heading .eyebrow{color:#FF8800;font-size:14px;font-weight:400;letter-spacing:0;margin-bottom:10px}
+.about-roll-heading .eyebrow{color:var(--ink);font-size:14px;font-weight:400;letter-spacing:0;margin-bottom:10px}
 .about-roll-heading h2{font-size:clamp(28px,2.3vw,36px);line-height:1.3}
 .about-roll-frame{overflow:clip}
 .about-roll-stage{position:relative}
@@ -10,7 +10,7 @@
 .about-fruit:not(.whole){opacity:0}
 .about-roll-copy{max-width:none;margin:36px 0}
 .about-roll-copy h3{font-size:22px;line-height:1.5;margin-bottom:12px;letter-spacing:-.03em}
-.about-roll-copy p{font-size:15px;line-height:1.85;color:#444}
+.about-roll-copy p{font-size:15px;line-height:1.85;color:var(--ink)}
 /* 화면은 고정하지만 스크롤 입력은 잠그지 않는다. */
 .about-scroll.about-scroll-active{height:1090svh;position:relative}
 .about-scroll-active .about-roll-frame{position:sticky;top:88px;height:calc(100svh - 88px)}

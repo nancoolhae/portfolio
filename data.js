@@ -1160,37 +1160,37 @@ window.PORTFOLIO = {
       "name": "PowerPoint",
       "description": "리서치 결과 시각화, 스토리보드 작성, 발표 자료 제작",
       "brix": 13,
-      "icon": "P"
+      "icon": "assets/tool-powerpoint.svg"
     },
     {
       "name": "Figma",
       "description": "와이어프레임, 프로토타이핑, 협업 도구",
       "brix": 14,
-      "icon": "F"
+      "icon": "assets/tool-figma.svg"
     },
     {
       "name": "Excel",
       "description": "정보 구조 설계, 리서치 결과 시각화, 데이터 정리",
       "brix": 12,
-      "icon": "E"
+      "icon": "assets/tool-excel.svg"
     },
     {
       "name": "Notion",
       "description": "일정 관리",
       "brix": 13,
-      "icon": "N"
+      "icon": "assets/tool-notion.svg"
     },
     {
       "name": "Word",
       "description": "회의록, 제안서 등 문서 작성",
       "brix": 12,
-      "icon": "W"
+      "icon": "assets/tool-word.svg"
     },
     {
       "name": "Chat GPT",
       "description": "코딩",
       "brix": 12,
-      "icon": "AI"
+      "icon": "assets/tool-chatgpt.svg"
     }
   ]
 };

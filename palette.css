@@ -1,0 +1,118 @@
+:root {
+  --paper: #fffde1;
+  --ink: #301c1b;
+  --muted: var(--ink);
+  --orange: #fe8505;
+  --fruit: var(--orange);
+  --off-red: #e52e01;
+  --line: #ded2bf;
+  --surface: #fffef4;
+  --section-tint: #fff4d5;
+  --orange-tint: #ffe6bf;
+}
+
+body,
+.header {
+  background: var(--paper);
+}
+
+.introduction {
+  grid-template-columns: minmax(0, 1fr);
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.introduction-copy,
+.introduction h1 {
+  text-align: center;
+}
+
+.introduction h1 {
+  font-weight: 700;
+}
+
+.intro-documents {
+  justify-content: center;
+}
+
+.tool-symbol img {
+  display: block;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+nav a::after,
+.brand-dot {
+  background: var(--off-red);
+}
+
+:where(a, button, input, textarea):focus-visible {
+  outline: 2px solid var(--off-red);
+  outline-offset: 3px;
+}
+
+.career,
+.portfolio-footer,
+.contact-info > div {
+  background: var(--section-tint);
+}
+
+.about.about-scroll,
+.project-story.story-growth {
+  background: var(--orange-tint);
+}
+
+.project-story.story-growth {
+  border-color: var(--orange);
+}
+
+.project-card,
+.project-card:first-child.featured,
+.featured-projects .card-visual,
+.tool-symbol,
+.contact form,
+#project-dialog,
+.detail-header {
+  background: var(--surface);
+}
+
+.tag-row span,
+.tag-row .award,
+.pending-download,
+.preview-pending {
+  background: var(--section-tint);
+}
+
+.primary,
+.intro-documents .button,
+.contact form .button,
+.career-sidebar .filters button[aria-pressed=true],
+.filters button[aria-pressed=true],
+.back-to-top,
+.skip,
+.dialog-bar button {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.primary:hover,
+.intro-documents .button:hover,
+.contact form .button:hover {
+  background: var(--orange-tint);
+  border-color: var(--off-red);
+}
+
+.featured-projects .all-projects-link,
+.featured-projects .all-projects-link:hover {
+  text-decoration-color: var(--off-red);
+}
+
+.gauge-track,
+.about-scroll-progress {
+  background: var(--orange-tint);
+}
+
+.gauge-fill,
+.about-scroll-progress > span {
+  background: var(--orange);
+}
