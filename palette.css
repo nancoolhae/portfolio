@@ -542,3 +542,7 @@ body,
 #featured-title {
   color: var(--orange);
 }
+
+#personal-downloads > .button:first-child {
+  color: #fff;
+}
