@@ -538,3 +538,7 @@ body,
   vertical-align: middle;
   white-space: nowrap;
 }
+
+#featured-title {
+  color: var(--orange);
+}
