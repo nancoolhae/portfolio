@@ -483,6 +483,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "compass",
+      "inProgress": true,
       "detailAward": "2026 캡스톤디자인 PT 우수작",
       "contributions": [
         {
@@ -712,6 +713,7 @@ window.PORTFOLIO = {
       "role": "시장 분석, 사용자 분석, 정보 구조 및 화면설계서 작성",
       "contribution": "60%",
       "tags": [
+        "신규 서비스 기획",
         "에스노그래피",
         "카드소팅"
       ],
