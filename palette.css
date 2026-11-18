@@ -451,6 +451,10 @@ body,
   }
 }
 
+#project-filters button[aria-pressed=true] {
+  color: #fff;
+}
+
 @media (hover: hover) {
   #career-filters button[aria-pressed]:hover,
   #project-filters button[aria-pressed]:hover {
