@@ -93,7 +93,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "effort",
-      "detailAward": "CDAK 디지털미디어 부문 특선",
+      "detailAward": "제 32회 CDAK 디지털미디어 부문 특선",
       "contributions": [
         {
           "title": "문제 정의 및 타겟 선정",

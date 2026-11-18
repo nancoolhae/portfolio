@@ -66,8 +66,8 @@
         icon.className = 'detail-award';
         icon.src = 'assets/project-award.png';
         icon.alt = '';
-        icon.width = 28;
-        icon.height = 28;
+        icon.width = 32;
+        icon.height = 32;
         detailTitle.append(' ', icon);
       }
       $('#detail-summary').textContent=p.summary;body.innerHTML=detailMarkup(p);

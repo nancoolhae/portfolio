@@ -547,12 +547,6 @@ body,
   color: #fff;
 }
 
-#project-filters button[aria-pressed=false] {
-  background: #6b514c;
-  border-color: #6b514c;
-}
-
-#project-filters button[aria-pressed],
 .project-downloads a.button.primary,
 .back-to-top {
   color: #fff;
@@ -560,14 +554,6 @@ body,
 
 .project-downloads a.button.primary:hover {
   color: var(--ink);
-}
-
-@media (hover: hover) {
-  #project-filters button[aria-pressed]:hover {
-    background: var(--orange-tint);
-    border-color: var(--off-red);
-    color: var(--ink);
-  }
 }
 
 @media (min-width: 561px) {
