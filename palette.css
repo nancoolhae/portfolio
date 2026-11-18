@@ -526,23 +526,61 @@ body,
 
 .detail-award {
   display: inline-block;
-  margin-inline-start: 6px;
-  padding: 3px 8px;
-  border: 1px solid #dba39b;
-  border-radius: 6px;
-  background: #f7ddd9;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: normal;
+  margin-inline-start: 4px;
   vertical-align: middle;
-  white-space: nowrap;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
-#featured-title {
+#featured-title,
+#career-title,
+#skills-title,
+#about-title,
+#contact-title {
   color: var(--orange);
 }
 
-#personal-downloads > .button:first-child {
+#personal-downloads > .button,
+#personal-downloads > .button:hover {
+  background: var(--orange);
+  border-color: var(--orange);
   color: #fff;
+}
+
+#project-filters button[aria-pressed=false] {
+  background: #6b514c;
+  border-color: #6b514c;
+}
+
+#project-filters button[aria-pressed],
+.project-downloads a.button.primary,
+.back-to-top {
+  color: #fff;
+}
+
+.project-downloads a.button.primary:hover {
+  color: var(--ink);
+}
+
+@media (hover: hover) {
+  #project-filters button[aria-pressed]:hover {
+    background: var(--orange-tint);
+    border-color: var(--off-red);
+    color: var(--ink);
+  }
+}
+
+@media (min-width: 561px) {
+  .project-facts-with-award {
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .project-facts-with-award > div:nth-child(n) {
+    border-bottom: 1px solid #dedede;
+  }
+
+  .project-facts-with-award > div:nth-child(4),
+  .project-facts-with-award > div:last-child {
+    border-bottom: 0;
+  }
 }

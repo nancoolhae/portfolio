@@ -93,7 +93,7 @@ window.PORTFOLIO = {
         }
       ],
       "id": "effort",
-      "detailAward": "CDAK 특선",
+      "detailAward": "CDAK 디지털미디어 부문 특선",
       "contributions": [
         {
           "title": "문제 정의 및 타겟 선정",
@@ -1441,7 +1441,7 @@ window.PORTFOLIO = {
     },
     {
       "name": "Chat GPT",
-      "description": "바이브 코딩, AI 레드팀",
+      "description": "바이브 코딩, 지침서 작성",
       "brix": 12,
       "icon": "assets/tool-chatgpt.svg"
     }
